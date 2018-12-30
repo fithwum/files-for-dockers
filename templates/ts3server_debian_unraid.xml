@@ -19,7 +19,7 @@
   <Support></Support>
   <Registry>https://hub.docker.com/r/fithwum/teamspeak-debian/</Registry>
   <GitHub>https://github.com/fithwum/teamspeak-debian</GitHub>
-  <Repository>fithwum/teamspeak3</Repository>
+  <Repository>fithwum/teamspeak-debian</Repository>
   <Project>https://www.teamspeak.com/</Project>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
