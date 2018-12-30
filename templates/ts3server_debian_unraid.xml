@@ -10,7 +10,8 @@
     [b]/ts3server[/b] This is where teamspeak will store it's configuration file, database and logs.[br][br]
     [b][u][span style='color: #E80000;']Notes[/span][/u][/b][br]
 	You will need to fill out the DB info in "ts3db_mariadb.ini" and set the license_accepted line in the ts3server.ini to license_accepted=1
-    Connect to the server using the TeamSpeak client with the host IP address and port 9987.[br]
+    
+	Connect to the server using the TeamSpeak client with the host IP address and port 9987.[br]
     To authenticate use the privilege key shown in the supervisord.log file in the host mapped /ts3server folder.
   </Description>
   <Overview>
