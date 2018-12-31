@@ -1,4 +1,4 @@
-#!/bin
+#!/bin/bash
 # Copyright (c) 2018 fithwum
 # All rights reserved
 echo "APT::Get::Assume-Yes \"true\";" | tee /etc/apt/apt.conf.d/10-assume_yes
