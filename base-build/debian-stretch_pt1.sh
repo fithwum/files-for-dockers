@@ -1,9 +1,7 @@
 #!/bin
 # Copyright (c) 2018 fithwum
 # All rights reserved
-
 RELEASE=stable
-
 echo "Getting needed things"
 wget https://raw.githubusercontent.com/fithwum/files-for-dockers/master/base-build/debian-stretch_pt3.sh
 apt-get install -y debootstrap ftp-upload bash dirmngr
