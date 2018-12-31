@@ -2,8 +2,7 @@
 # Copyright (c) 2018 fithwum
 # All rights reserved
 
-DISTRO=
-RELEASE=
+RELEASE=stable
 
 echo "Getting needed things"
 apt-get install -y debootstrap ftp-upload bash dirmngr
