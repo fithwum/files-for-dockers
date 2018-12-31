@@ -37,7 +37,8 @@ du --human-readable --summarize debian-stretch
 
 tar --verbose --create --file debian-stretch.tar --directory debian-stretch .
 
+sudo tar -cvjSf folder.tar.bz2 folder
+
 ftp-upload -v -h 192.168.1.92:8001 -u {} --password {} -d /files debian-stretch.tar
 
-
-
+sudo tar -cvjSf folder.tar.bz2 folder
