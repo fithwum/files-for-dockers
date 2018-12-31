@@ -1,7 +1,9 @@
 #!/bin/bash
 # Copyright (c) 2018 fithwum
 # All rights reserved
+
 RELEASE=
+
 umount debian-stretch/dev/pts
 umount debian-stretch/dev
 umount debian-stretch/proc
