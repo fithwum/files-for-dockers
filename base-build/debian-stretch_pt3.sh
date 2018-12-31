@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin
 # Copyright (c) 2018 fithwum
 # All rights reserved
 
