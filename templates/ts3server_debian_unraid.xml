@@ -17,8 +17,8 @@ Connect to the server using the TeamSpeak client with the host IP address and po
 To authenticate use the privilege key shown in the supervisord.log file in the /ts3-debian folder.</Overview>
   <Category>Network:Voip</Category>
   <WebUI/>
-  <TemplateURL>https://github.com/fithwum/teamspeak3/templates/ts3server_debian_unraid.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/fithwum/teamspeak3/master/icons/Ts3Icon.png</Icon>
+  <TemplateURL>https://github.com/fithwum/files-for-dockers/templates/ts3server_debian_unraid.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/Ts3Icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
