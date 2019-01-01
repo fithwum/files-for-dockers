@@ -33,9 +33,6 @@
   </Data>
   <WebUI></WebUI>
   <Icon>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/Ts3Icon.png</Icon>
-  <DonateText></DonateText>
-  <DonateLink></DonateLink>
-  <DonateImg></DonateImg>
   <ExtraParams></ExtraParams>
   <Labels/>
   <Config Name="Host Port 1" Target="9987" Default="9987" Mode="udp" Description="Container Port: 9987" Type="Port" Display="always" Required="true" Mask="false">9987</Config>
