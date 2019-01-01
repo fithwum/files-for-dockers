@@ -1,45 +1,75 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Containers>
-  <TemplateURL>https://github.com/fithwum/files-for-dockers/templates/ts3server_alpine_unraid.xml</TemplateURL>
-  <Beta>true</Beta>
-  <Category>Network:Voip</Category>
+<?xml version="1.0"?>
+<Container version="2">
   <Name>teamspeak-alpine</Name>
-  <Description>
-	TeamSpeak is proprietary voice-over-Internet Protocol (VoIP) software that allows computer users to speak on a chat channel with fellow computer users, much like a telephone conference call. A TeamSpeak user will often wear a headset with an integrated microphone. Users use the TeamSpeak client software to connect to a TeamSpeak server of their choice, from there they can join chat channels and discuss things.
-	Configuration.
-	Teamspeak will store it's configuration file, and logs in /ts3-debian.
-    Notes.
-	You will need to fill out the DB info in "ts3db_mariadb.ini" and set the license_accepted line in the ts3server.ini to license_accepted=1
-	Connect to the server using the TeamSpeak client with the host IP address and port 9987.[br]
-    To authenticate use the privilege key shown in the supervisord.log file in the host mapped /ts3-debian folder.
-  </Description>
-  <Overview>
-    Configuration.
-	Teamspeak will store it's configuration file, and logs in /ts3-alpine.
-    Notes.
-	You will need to fill out the DB info in "ts3db_mariadb.ini" and set the license_accepted line in the ts3server.ini to license_accepted=1
-	Connect to the server using the TeamSpeak client with the host IP address and port 9987.[br]
-    To authenticate use the privilege key shown in the supervisord.log file in the host mapped /ts3-alpine folder.
-  </Overview>
-  <Support></Support>
-  <Registry>https://hub.docker.com/r/fithwum/teamspeak-alpine/</Registry>
-  <GitHub>https://github.com/fithwum/teamspeak-alpine</GitHub>
   <Repository>fithwum/teamspeak-alpine</Repository>
-  <Project>https://www.teamspeak.com/</Project>
-  <BindTime>true</BindTime>
+  <Registry>https://hub.docker.com/r/fithwum/teamspeak-alpine/</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
   <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://www.teamspeak.com/</Project>
+  <Overview>TeamSpeak is proprietary voice-over-Internet Protocol (VoIP) software that allows computer users to speak on a chat channel with fellow computer users, much like a telephone conference call. A TeamSpeak user will often wear a headset with an integrated microphone. Users use the TeamSpeak client software to connect to a TeamSpeak server of their choice, from there they can join chat channels and discuss things.[br][br]&#xD;
+[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
+[b]/ts3-alpine[/b] This is where teamspeak will store it's configuration file, database and logs.[br][br]&#xD;
+[b][u][span style='color: #E80000;']Notes[/span][/u][/b][br]&#xD;
+Connect to the server using the TeamSpeak client with the host IP address and port 9987.[br]&#xD;
+To authenticate use the privilege key shown in the supervisord.log file in the /ts3-alpine folder.</Overview>
+  <Category>Network:Voip</Category>
+  <WebUI/>
+  <TemplateURL>https://github.com/fithwum/teamspeak3/templates/ts3server_alpine_unraid.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/fithwum/teamspeak3/master/icons/Ts3Icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1546314307</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>TeamSpeak is proprietary voice-over-Internet Protocol (VoIP) software that allows computer users to speak on a chat channel with fellow computer users, much like a telephone conference call. A TeamSpeak user will often wear a headset with an integrated microphone. Users use the TeamSpeak client software to connect to a TeamSpeak server of their choice, from there they can join chat channels and discuss things.[br][br]&#xD;
+[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
+[b]/ts3-alpine[/b] This is where teamspeak will store it's configuration file, database and logs.[br][br]&#xD;
+[b][u][span style='color: #E80000;']Notes[/span][/u][/b][br]&#xD;
+Connect to the server using the TeamSpeak client with the host IP address and port 9987.[br]&#xD;
+To authenticate use the privilege key shown in the supervisord.log file in the /ts3-alpine folder.</Description>
   <Networking>
-	<Mode>host</Mode>
+    <Mode>host</Mode>
     <Publish>
+      <Port>
+        <HostPort>9987</HostPort>
+        <ContainerPort>9987</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>10011</HostPort>
+        <ContainerPort>10011</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>30033</HostPort>
+        <ContainerPort>30033</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
     </Publish>
   </Networking>
-  <Environment>
-  </Environment>
   <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ts3-alpine</HostDir>
+      <ContainerDir>/ts3server</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
-  <WebUI></WebUI>
-  <Icon>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/Ts3Icon.png</Icon>
-  <ExtraParams></ExtraParams>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
   <Labels/>
   <Config Name="Host Port 1" Target="9987" Default="9987" Mode="udp" Description="Container Port: 9987" Type="Port" Display="always" Required="true" Mask="false">9987</Config>
   <Config Name="Host Port 2" Target="10011" Default="10011" Mode="tcp" Description="Container Port: 10011" Type="Port" Display="always" Required="true" Mask="false">10011</Config>
@@ -47,4 +77,4 @@
   <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
   <Config Name="Key 3" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
   <Config Name="AppData Config Path" Target="/ts3server" Default="/mnt/user/appdata/ts3-alpine" Mode="rw" Description="Container Path: /ts3server" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ts3-alpine</Config>
-</Containers>
+</Container>
