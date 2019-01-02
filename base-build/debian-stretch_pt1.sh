@@ -13,7 +13,7 @@ apt-get install -y debootstrap ftp-upload bash dirmngr
 sleep 1
 echo "Downloading distro of choice"
 sleep 1
-debootstrap --keyring /etc/apt/trusted.gpg.d/debian-archive-stretch-stable.gpg --force-check-gpg --variant=minbase --components=main,contrib,non-free --include=dirmngr,apt-transport-https,wget,bzip2,bash,nano --arch=amd64 stable /debian-stretch http://deb.debian.org/debian/
+debootstrap --keyring /etc/apt/trusted.gpg.d/debian-archive-stretch-stable.gpg --force-check-gpg --variant=minbase --components=main,contrib,non-free --include=dirmngr,apt-transport-https,wget,bzip2,bash,nano,ca-certificates --arch=amd64 stable /debian-stretch http://deb.debian.org/debian/
 sleep 1
 echo "Filesystem size before."
 sleep 1
