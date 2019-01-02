@@ -18,6 +18,6 @@ apt-get clean
 sleep 1
 find /var/lib/apt/lists/ -maxdepth 2 -type f -delete
 sleep 1
-echo "Going back to root for final steps."
+echo "Type "exit" go back to root for final steps."
 sleep 1
 exit
