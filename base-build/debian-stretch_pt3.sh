@@ -13,6 +13,8 @@ sleep 1
 umount debian-stretch/proc
 sleep 1
 umount debian-stretch/sys
+echo "cleaning up unneeded script"
+rm -frv ./debian-stretch_pt2.sh
 sleep 1
 echo "Filesystem size after."
 sleep 1
