@@ -22,13 +22,13 @@ tar --verbose --create --file debian-stretch.tar --directory debian-stretch .
 sleep 1
 echo "Filesystem bundle."
 sleep 1
-du --human-readable --summarize debian-stretch
+du --human-readable --summarize debian-stretch.tar
 sleep 10
 tar -cvjf debian-stretch.tar.bz2 --directory debian-stretch .
 sleep 1
 echo "Filesystem archive."
 sleep 1
-du --human-readable --summarize debian-stretch
+du --human-readable --summarize debian-stretch.tar.bz2
 sleep 10
 echo "upload to ftp."
 sleep 1
