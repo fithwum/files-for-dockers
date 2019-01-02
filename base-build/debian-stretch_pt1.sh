@@ -5,8 +5,8 @@
 RELEASE=stable
 
 echo "Getting needed things"
-wget https://raw.githubusercontent.com/fithwum/files-for-dockers/master/base-build/debian-stretch_pt2.sh -O /debian-stretch_pt2.sh
-wget https://raw.githubusercontent.com/fithwum/files-for-dockers/master/base-build/debian-stretch_pt3.sh -O /debian-stretch_pt3.sh
+wget --no-cache https://raw.githubusercontent.com/fithwum/files-for-dockers/master/base-build/debian-stretch_pt2.sh -O /debian-stretch_pt2.sh
+wget --no-cache https://raw.githubusercontent.com/fithwum/files-for-dockers/master/base-build/debian-stretch_pt3.sh -O /debian-stretch_pt3.sh
 chmod +x debian-stretch_pt2.sh debian-stretch_pt3.sh
 sleep 1
 apt-get install -y debootstrap ftp-upload bash dirmngr
