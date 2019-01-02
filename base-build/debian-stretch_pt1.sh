@@ -12,7 +12,10 @@ sleep 1
 apt-get install -y debootstrap ftp-upload bash dirmngr
 sleep 1
 echo "Downloading distro of choice"
+sleep 1
 debootstrap --keyring /etc/apt/trusted.gpg.d/debian-archive-stretch-stable.gpg --force-check-gpg --variant=minbase --components=main,contrib,non-free --include=dirmngr,apt-transport-https,wget,bzip2,bash,nano --arch=amd64 stable /debian-stretch http://deb.debian.org/debian/
+sleep 1
+echo "Filesystem size before."
 sleep 1
 du --human-readable --summarize debian-stretch
 sleep 10
@@ -28,7 +31,7 @@ mount --bind /sys debian-stretch/sys
 sleep 1
 cp -v debian-stretch_pt2.sh /debian-stretch
 sleep 1
-echo "Changine to new root"
+echo "Change to new root"
 sleep 1
 sudo chroot debian-stretch
 exit
