@@ -1,30 +1,13 @@
 #!/bin/bash
 # Copyright (c) 2018 fithwum
 # All rights reserved
-# Setup the target partition for install
-mkfs.ext4 -L Debian /dev/sda1
-mkdir /mnt/deboot
-mount -t ext4 /dev/sda1 /mnt/deboot
-# Installing the base system with network access
-debootstrap --include linux-image-amd64,grub-pc,locales --arch amd64 unstable /mnt/deboot http://ftp.us.debian.org/debian
-# Preparing the chroot environment
-cp /etc/mtab /mnt/deboot/etc/mtab
-mount -o bind /dev /mnt/deboot/dev
-mount -o bind /proc /mnt/deboot/proc
-mount -o bind /sys /mnt/deboot/sys
-# Continuing the installation within chroot
-chroot /mnt/deboot /bin/bash
-grub-install /dev/sda
-update-grub
-blkid /dev/sda1
-UUID=79168060-9d9c-4cf6-8ee9-bb846aee589b / ext4 defaults,errors=remount-ro 0 1
-echo "debian" > /etc/hostname
-dpkg-reconfigure locales
-passwd
-adduser user
-# Setting up the network (eth0)
-dhclient -v eth0
-# Finishing the install
-apt-get clean
-update-initramfs -u -k all
+
+wget https://www.teamspeak.com/versions/server.json /mnt/user/Sync/test/server.json
+TEXT="Getting latest teamspeak server version."
+TS_VERSION="${TS_VERSION_CHECK}"
+TS_VERSION_CHECK=jq .linux.x86.version server.json
+sleep 1
+echo "${TEXT}"
+wget https://files.teamspeak-services.com/releases/server/${TS_VERSION}/teamspeak3-server_linux_amd64-${TS_VERSION}.tar.bz2 -O /mnt/user/Sync/test/ts3server_${TS_VERSION}.tar.bz2
+sleep 1
 exit
