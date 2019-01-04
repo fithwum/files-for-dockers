@@ -23,5 +23,4 @@ find /var/lib/apt/lists/ -maxdepth 2 -type f -delete
 sleep 1
 echo "Type "exit" go back to root for final steps."
 sleep 1
-exec ./debian-stretch_pt3.sh
 exit
