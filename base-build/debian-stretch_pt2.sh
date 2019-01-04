@@ -5,7 +5,6 @@
 echo "APT::Get::Assume-Yes \"true\";" | tee /etc/apt/apt.conf.d/10-assume_yes
 sleep 1
 echo "INFO ! setting certs for wget"
---ca-directory=/usr/ssl/certs
 sleep 1
 # echo "Installing git."
 # sleep 1
