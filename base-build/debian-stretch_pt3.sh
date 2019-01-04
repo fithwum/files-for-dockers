@@ -13,20 +13,20 @@ sleep 1
 umount debian-stretch/proc
 sleep 1
 umount debian-stretch/sys
-echo "cleaning up unneeded script"
+echo "INFO ! Cleaning up unneeded script"
 rm -frv /debian-stretch/debian-stretch_pt2.sh
 sleep 1
-echo "Filesystem size after."
+echo "INFO ! Filesystem size after."
 sleep 1
 du --human-readable --summarize debian-stretch
 sleep 10
 tar -cvjf debian-stretch.tar.bz2 --directory debian-stretch .
 sleep 1
-echo "Filesystem archive."
+echo "INFO ! Filesystem archive."
 sleep 1
 du --human-readable --summarize debian-stretch.tar.bz2
 sleep 10
-echo "upload to ftp."
+echo "INFO ! Upload image to ftp."
 sleep 1
 ftp-upload -v -h {IP}:{PORT} -u {USER} --password {PASSWORD} -d /files debian-stretch.tar
 sleep 1
