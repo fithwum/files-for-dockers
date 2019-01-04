@@ -7,6 +7,7 @@ sleep 1
 echo "setting certs for wget"
 --ca-directory=/usr/ssl/certs
 sleep 1
+apt-get update
 # echo "Installing git."
 # sleep 1
 # apt-get install --no-install-recommends git
