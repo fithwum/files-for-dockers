@@ -4,15 +4,6 @@
 
 RELEASE=
 
-echo "Unmounting folders for root"
-sleep 1
-umount debian-stretch/dev/pts
-sleep 1
-umount debian-stretch/dev
-sleep 1
-umount debian-stretch/proc
-sleep 1
-umount debian-stretch/sys
 echo "INFO ! Cleaning up unneeded script"
 rm -frv /debian-stretch/debian-stretch_pt2.sh
 sleep 1
@@ -33,5 +24,4 @@ sleep 1
 rm -frv debian-stretch
 rm -frv debian-stretch_pt2.sh
 rm -frv debian-stretch_pt3.sh
-rm -frv debian-stretch.tar.bz2
 exit
