@@ -5,23 +5,25 @@
 RELEASE=stable
 echo "INFO ! Getting system updates"
 apt-get -y update
-echo "INFO ! Getting needed things"
+echo " "
+echo "INFO ! Downloading other parts of the script."
 wget --no-cache https://raw.githubusercontent.com/fithwum/files-for-dockers/master/base-build/debian-stretch_pt2.sh -O /debian-stretch_pt2.sh
 wget --no-cache https://raw.githubusercontent.com/fithwum/files-for-dockers/master/base-build/debian-stretch_pt3.sh -O /debian-stretch_pt3.sh
 chmod +x debian-stretch_pt2.sh debian-stretch_pt3.sh
 sleep 1
+echo " "
+echo "INFO ! Installing debootstrap ftp-upload bash dirmngr"
 apt-get install -y debootstrap ftp-upload bash dirmngr
 sleep 1
+echo " "
 echo "INFO ! Downloading debian & selected packages"
-sleep 1
 debootstrap --keyring /etc/apt/trusted.gpg.d/debian-archive-stretch-stable.gpg --force-check-gpg --variant=minbase --components=main,contrib,non-free --include=dirmngr,apt-transport-https,wget,bzip2,bash,nano,ca-certificates,git --arch=amd64 stable /debian-stretch http://deb.debian.org/debian/
-sleep 1
+echo " "
 echo "INFO ! Filesystem size uncompressed."
-sleep 1
 du --human-readable --summarize debian-stretch
 sleep 10
+echo " "
 echo "INFO ! Mounting folders for root"
-sleep 1
 mount --bind /dev debian-stretch/dev
 sleep 1
 mount --bind /dev/pts debian-stretch/dev
@@ -31,8 +33,8 @@ sleep 1
 mount --bind /sys debian-stretch/sys
 sleep 1
 cp -v debian-stretch_pt2.sh /debian-stretch
-sleep 1
+echo " "
 echo "INFO ! Change to new root"
 sleep 1
-sudo chroot debian-stretch
+chroot debian-stretch
 exit
