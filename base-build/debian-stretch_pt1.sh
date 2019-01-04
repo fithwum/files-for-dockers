@@ -3,6 +3,8 @@
 # All rights reserved
 
 RELEASE=stable
+
+echo " "
 echo "INFO ! Getting system updates"
 apt-get -y update
 echo " "
