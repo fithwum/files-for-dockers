@@ -4,7 +4,7 @@
 
 RELEASE=
 
-echo "INFO ! Cleaning up unneeded script"
+echo "INFO ! Cleaning up pt2 of script from base image script"
 rm -frv /debian-stretch/debian-stretch_pt2.sh
 sleep 1
 echo "INFO ! Filesystem size after."
