@@ -30,4 +30,8 @@ echo "upload to ftp."
 sleep 1
 ftp-upload -v -h {IP}:{PORT} -u {USER} --password {PASSWORD} -d /files debian-stretch.tar
 sleep 1
+rm -frv debian-stretch
+rm -frv debian-stretch_pt2.sh
+rm -frv debian-stretch_pt3.sh
+rm -frv debian-stretch.tar.bz2
 exit
