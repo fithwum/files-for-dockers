@@ -35,5 +35,4 @@ sleep 1
 echo "Change to new root"
 sleep 1
 sudo chroot debian-stretch
-exec ./debian-stretch_pt2.sh
 exit
