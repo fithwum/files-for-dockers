@@ -7,6 +7,7 @@ echo "APT::Get::Assume-Yes \"true\";" | tee /etc/apt/apt.conf.d/10-assume_yes
 sleep 1
 echo " "
 echo "INFO ! Removeing unnecessary packages."
+apt-get update
 apt-get remove --allow-remove-essential e2fsprogs e2fslibs pinentry-curses whiptail kmod iptables iproute2 dmidecode
 sleep 1
 echo " "
