@@ -12,6 +12,8 @@ echo " "
 echo "INFO ! Base image size after cleanup."
 du --human-readable --summarize debian-stretch
 sleep 10
+echo " "
+echo "INFO ! Creating base image archive."
 tar -cjf debian-stretch.tar.bz2 --directory debian-stretch .
 sleep 1
 echo " "
