@@ -24,5 +24,5 @@ ftp-upload -v -h {IP}:{PORT} -u {USER} --password {PASSWORD} -d /files debian-st
 sleep 1
 echo " "
 echo "INFO ! Removing temp files"
-rm -frv debian-stretch
+rm -fr debian-stretch
 exit
