@@ -19,7 +19,7 @@ apt-get install -y debootstrap ftp-upload bash dirmngr
 sleep 1
 echo " "
 echo "INFO ! Downloading debian & selected packages"
-debootstrap --keyring /etc/apt/trusted.gpg.d/debian-archive-stretch-stable.gpg --force-check-gpg --variant=minbase --components=main,contrib,non-free --include=dirmngr,apt-transport-https,wget,bzip2,bash,nano,ca-certificates,git --arch=amd64 stable /debian-stretch http://deb.debian.org/debian/
+debootstrap --keyring /etc/apt/trusted.gpg.d/debian-archive-stretch-stable.gpg --force-check-gpg --variant=minbase --components=main,contrib,non-free --include=dirmngr,apt-transport-https,wget,bzip2,bash,nano,ca-certificates,git,software-properties-common --arch=amd64 stable /debian-stretch http://deb.debian.org/debian/
 echo " "
 echo "INFO ! Filesystem size uncompressed."
 du --human-readable --summarize debian-stretch
