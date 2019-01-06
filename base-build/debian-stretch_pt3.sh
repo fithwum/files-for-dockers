@@ -14,6 +14,7 @@ du --human-readable --summarize debian-stretch
 sleep 10
 echo " "
 echo "INFO ! Creating base image archive."
+echo "INFO ! This may take some time."
 tar -cjf debian-stretch.tar.bz2 --directory debian-stretch .
 sleep 1
 echo " "
@@ -21,7 +22,7 @@ echo "INFO ! Base image archive."
 du --human-readable --summarize debian-stretch.tar.bz2
 sleep 10
 echo " "
-echo "INFO ! Uploading image to ftp."
+echo "INFO ! Uploading image to ftp server."
 ftp-upload -v -h {IP}:{PORT} -u {USER} --password {PASSWORD} -d /files debian-stretch.tar.bz2
 sleep 1
 echo " "
