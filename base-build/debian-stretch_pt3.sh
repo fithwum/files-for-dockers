@@ -5,7 +5,7 @@
 RELEASE=
 
 echo " "
-echo "INFO ! Cleaning up pt2 of script from base image"
+echo "INFO ! Cleaning up pt2 of script from base image."
 rm -frv /debian-stretch/debian-stretch_pt2.sh
 sleep 1
 echo " "
@@ -26,7 +26,7 @@ echo "INFO ! Uploading image to ftp server."
 ftp-upload -v -h {IP}:{PORT} -u {USER} --password {PASSWORD} -d /files debian-stretch.tar.bz2
 sleep 1
 echo " "
-echo "INFO ! Removing temp files"
+echo "INFO ! Removing temp files."
 rm -fr debian-stretch
 rm -fr debian-stretch.tar.bz2
 exit
