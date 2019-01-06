@@ -25,22 +25,22 @@ if [ -e /debian-stretch_pt3.sh ]
 fi
 sleep 1
 echo " "
-echo "INFO ! Getting system updates"
+echo "INFO ! Getting system updates."
 apt-get -y update
 sleep 1
 echo " "
-echo "INFO ! Installing debootstrap ftp-upload bash dirmngr"
+echo "INFO ! Installing debootstrap,ftp-upload,bash,dirmngr."
 apt-get install -y debootstrap ftp-upload bash dirmngr
 sleep 1
 echo " "
-echo "INFO ! Downloading debian & selected packages"
+echo "INFO ! Downloading debian & selected packages."
 debootstrap --keyring /etc/apt/trusted.gpg.d/debian-archive-stretch-stable.gpg --force-check-gpg --variant=minbase --components=main,contrib,non-free --include=dirmngr,apt-transport-https,wget,bzip2,bash,nano,ca-certificates,software-properties-common --arch=amd64 stable /debian-stretch http://deb.debian.org/debian/
 echo " "
 echo "INFO ! Filesystem size uncompressed."
 du --human-readable --summarize debian-stretch
 sleep 10
 echo " "
-echo "INFO ! Mounting folders for root"
+echo "INFO ! Mounting folders for root."
 mount --bind /dev debian-stretch/dev
 sleep 1
 mount --bind /dev/pts debian-stretch/dev
@@ -51,7 +51,7 @@ mount --bind /sys debian-stretch/sys
 sleep 1
 cp -v debian-stretch_pt2.sh /debian-stretch
 echo " "
-echo "INFO ! Change to new root"
+echo "INFO ! Changeing to new root."
 sleep 1
 chroot debian-stretch
 exit
