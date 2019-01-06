@@ -20,9 +20,10 @@ du --human-readable --summarize debian-stretch.tar.bz2
 sleep 10
 echo " "
 echo "INFO ! Uploading image to ftp."
-ftp-upload -v -h {IP}:{PORT} -u {USER} --password {PASSWORD} -d /files debian-stretch.tar
+ftp-upload -v -h {IP}:{PORT} -u {USER} --password {PASSWORD} -d /files debian-stretch.tar.bz2
 sleep 1
 echo " "
 echo "INFO ! Removing temp files"
 rm -fr debian-stretch
+rm -fr debian-stretch.tar.bz2
 exit
