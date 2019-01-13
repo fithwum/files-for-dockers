@@ -30,7 +30,10 @@ To authenticate use the privilege key shown in the supervisord.log file in the /
 [b]/ts3-debian[/b] This is where teamspeak will store it's configuration file, database and logs.[br][br]&#xD;
 [b][u][span style='color: #E80000;']Notes[/span][/u][/b][br]
 Connect to the server using the TeamSpeak client with the host IP address and port 9987.[br]
-To authenticate use the privilege key shown in the supervisord.log file in the /ts3-debian folder.</Description>
+To authenticate use the privilege key shown in the supervisord.log file in the /ts3-debian folder.
+</Description>
+  <Beta>False</Beta>
+  <Date>2019-01-13</Date>
   <Networking>
     <Mode>host</Mode>
     <Publish>
