@@ -35,10 +35,10 @@ To authenticate use the privilege key shown in the supervisord.log file in the /
   <Beta>False</Beta>
   <Date>2019-01-13</Date>
   <Changes>[font size=4][center]teamspeak-alpine[/center][/font]
-[font size=3][b]v1.0.0[/b][/font] (2019-01-05)
+[font size=3][b]v1.0.2[/b][/font] (2019-01-05)
 &#x00a0;&#x00a0;- changed the way user files are preserved during update process now it is much faster.
 
-[font size=3][b]v1.0.0[/b][/font] (2019-01-03)
+[font size=3][b]v1.0.1[/b][/font] (2019-01-03)
 &#x00a0;&#x00a0;- Added an automatic check for new teamspeak server verstion on startup.
 &#x00a0;&#x00a0;- Added more information output to indicate what is happening in the docker logs.
 
