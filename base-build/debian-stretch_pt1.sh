@@ -28,6 +28,8 @@ echo " "
 echo "INFO ! Getting system updates."
 apt-get -y update
 sleep 1
+apt-get -y upgrade
+sleep 1
 echo " "
 echo "INFO ! Installing debootstrap,ftp-upload,bash,dirmngr."
 apt-get install -y debootstrap ftp-upload bash dirmngr
