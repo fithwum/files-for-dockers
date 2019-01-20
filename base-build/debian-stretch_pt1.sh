@@ -30,6 +30,8 @@ apt-get -y update
 sleep 1
 apt-get -y upgrade
 sleep 1
+apt-get -y dist-upgrade
+sleep 1
 echo " "
 echo "INFO ! Installing debootstrap,ftp-upload,bash,dirmngr."
 apt-get install -y debootstrap ftp-upload bash dirmngr
@@ -44,11 +46,8 @@ sleep 10
 echo " "
 echo "INFO ! Mounting folders for root."
 mount --bind /dev debian-stretch/dev
-sleep 1
 mount --bind /dev/pts debian-stretch/dev
-sleep 1
 mount --bind /proc debian-stretch/proc
-sleep 1
 mount --bind /sys debian-stretch/sys
 sleep 1
 cp -v debian-stretch_pt2.sh /debian-stretch
