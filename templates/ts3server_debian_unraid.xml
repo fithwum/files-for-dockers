@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/76748-support-fithwum-teamspeakdebian/</Support>
+  <Support>https://forums.unraid.net/topic/76749-support-fithwum-teamspeakdebian/</Support>
   <Project>https://www.teamspeak.com/</Project>
   <Overview>TeamSpeak is proprietary voice-over-Internet Protocol (VoIP) software that allows computer users to speak on a chat channel with fellow computer users, much like a telephone conference call. A TeamSpeak user will often wear a headset with an integrated microphone. Users use the TeamSpeak client software to connect to a TeamSpeak server of their choice, from there they can join chat channels and discuss things.[br][br]&#xD;
 [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
@@ -44,7 +44,6 @@ To authenticate use the privilege key shown in the supervisord.log file in the /
 
 [font size=3][b](2019-01-02)[/b][/font]
 &#x00a0;&#x00a0;- Changed the update process to preserve all settings/files/logs created by user/server.
-&#x00a0;&#x00a0;- Changed to a new smaller base image (still debian).
 
   </Changes>
   <Networking>
