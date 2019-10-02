@@ -42,11 +42,11 @@ debootstrap --keyring /etc/apt/trusted.gpg.d/debian-archive-stretch-stable.gpg -
 echo " "
 echo "INFO ! Filesystem size uncompressed."
 du --human-readable --summarize debian-stretch
-sleep 10
+sleep 5
 echo " "
 echo "INFO ! Mounting folders for root."
 mount --bind /dev debian-stretch/dev
-mount --bind /dev/pts debian-stretch/dev
+mount --bind /dev/pts debian-stretch/dev/pts
 mount --bind /proc debian-stretch/proc
 mount --bind /sys debian-stretch/sys
 sleep 1
