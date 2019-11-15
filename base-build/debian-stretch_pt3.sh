@@ -2,8 +2,6 @@
 # Copyright (c) 2018 fithwum
 # All rights reserved
 
-RELEASE=
-
 echo " "
 echo "INFO ! Cleaning up pt2 of script from base image."
 rm -frv /debian-stretch/debian-stretch_pt2.sh
