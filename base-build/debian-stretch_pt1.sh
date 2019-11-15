@@ -37,7 +37,7 @@ echo "INFO ! Installing debootstrap,ftp-upload,bash,dirmngr."
 apt-get install -y debootstrap ftp-upload bash dirmngr
 sleep 1
 echo " "
-apt-key --keyring /etc/apt/trusted.gpg.d/debian-archive-stretch-stable.gpg adv --keyserver pgpkeys.mit.edu --recv-keys EF0F382A1A7B6500
+apt-key --keyring /etc/apt/trusted.gpg.d/debian-archive-stretch-stable.gpg adv --keyserver pgpkeys.mit.edu --recv-keys DCC9EFBF77E11517
 sleep 1
 echo " "
 echo "INFO ! Downloading debian & selected packages."
