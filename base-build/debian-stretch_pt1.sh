@@ -3,6 +3,7 @@
 # All rights reserved
 
 RELEASE=stable
+
 echo " "
 echo "INFO ! Downloading other parts of the script if needed."
 if [ -e /debian-stretch_pt2.sh ]
