@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>FoundryVTT</Name>
+  <Repository>fithwum/foundryvtt</Repository>
+  <Registry>https://hub.docker.com/r/fithwum/foundryvtt/</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support></Support>
+  <Project>https://foundryvtt.com/</Project>
+  <Overview>FoundryVTT is a D&D game server.</Overview>
+  <Category>Games:Server</Category>
+  <WebUI/>
+  <TemplateURL>https://github.com/fithwum/files-for-dockers/templates/FoundryVTT_alpine_unraid.xml</TemplateURL>
+  <Icon></Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>FoundryVTT is a D&D game server.</Description>
+  <Beta>False</Beta>
+  <Date>2020-06-8</Date>
+  <Changes></Changes>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>30000</HostPort>
+        <ContainerPort>30000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/FoundryVTT</HostDir>
+      <ContainerDir>/home/foundry</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Port" Target="30000" Default="30000" Mode="tcp" Description="Container Port: 30000" Type="Port" Display="always" Required="true" Mask="false">30000</Config>
+  <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="Key 3" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="AppData Config Path" Target="/home/foundry" Default="/mnt/user/appdata/FoundryVTT" Mode="rw" Description="Container Path: /home/foundry" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/FoundryVTT</Config>
+</Container>
