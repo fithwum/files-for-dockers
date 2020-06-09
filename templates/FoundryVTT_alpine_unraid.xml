@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support></Support>
   <Project>https://foundryvtt.com/</Project>
-  <Overview>FoundryVTT is a D&D game server.</Overview>
+  <Overview>FoundryVTT is a D&amp;D game server.</Overview>
   <Category>Games:Server</Category>
   <WebUI/>
   <TemplateURL>https://github.com/fithwum/files-for-dockers/templates/FoundryVTT_alpine_unraid.xml</TemplateURL>
@@ -20,7 +20,7 @@
   <DateInstalled/>
   <DonateText/>
   <DonateLink/>
-  <Description>FoundryVTT is a D&D game server.</Description>
+  <Description>FoundryVTT is a D&amp;D game server.</Description>
   <Beta>False</Beta>
   <Date>2020-06-8</Date>
   <Changes></Changes>
