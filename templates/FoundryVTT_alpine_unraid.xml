@@ -10,7 +10,7 @@
   <Support></Support>
   <Project>https://foundryvtt.com/</Project>
   <Overview>FoundryVTT is a D&amp;D game server.</Overview>
-  <Category>Games:Server</Category>
+  <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL>https://github.com/fithwum/files-for-dockers/templates/FoundryVTT_alpine_unraid.xml</TemplateURL>
   <Icon></Icon>
