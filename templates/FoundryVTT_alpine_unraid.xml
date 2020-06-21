@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>FoundryVTT</Name>
-  <Repository>fithwum/foundryvtt</Repository>
-  <Registry>https://hub.docker.com/r/fithwum/foundryvtt/</Registry>
+  <Repository>fithwum/foundry_vtt</Repository>
+  <Registry>https://hub.docker.com/r/fithwum/foundry_vtt/</Registry>
   <Network>host</Network>
   <MyIP/>
   <Shell>sh</Shell>
