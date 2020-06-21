@@ -22,7 +22,7 @@
   <DonateLink/>
   <Description>Test</Description>
   <Beta>False</Beta>
-  <Date>2020-05-16</Date>
+  <Date>2020-06-21</Date>
   <Changes>[font size=4][center]foundryvtt-alpine[/center][/font]
 [font size=3][b](2020-06-21)[/b][/font]
 &#x00a0;&#x00a0;- First Test.
@@ -41,7 +41,7 @@
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/FoundryVTT</HostDir>
-      <ContainerDir>/foundryvtt</ContainerDir>
+      <ContainerDir>/home/foundry</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
