@@ -13,7 +13,7 @@
   <Category>Games:Server</Category>
   <WebUI/>
   <TemplateURL></TemplateURL>
-  <Icon></Icon>
+  <Icon>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/d20.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
