@@ -23,8 +23,8 @@ To authenticate use the privilege key shown in the supervisord.log file in the /
   <PostArgs/>
   <CPUset/>
   <DateInstalled/>
-  <DonateText/>
-  <DonateLink/>
+  <DonateText>Buy me a coffee if you like.</DonateText>
+  <DonateLink>https://checkout.square.site/pay/340d93c602a042b8a223a2f7c184a6a2</DonateLink>
   <Description>TeamSpeak is proprietary voice-over-Internet Protocol (VoIP) software that allows computer users to speak on a chat channel with fellow computer users, much like a telephone conference call. A TeamSpeak user will often wear a headset with an integrated microphone. Users use the TeamSpeak client software to connect to a TeamSpeak server of their choice, from there they can join chat channels and discuss things.[br][br]&#xD;
 [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
 [b]/ts3-debian[/b] This is where teamspeak will store it's configuration file, database and logs.[br][br]&#xD;
