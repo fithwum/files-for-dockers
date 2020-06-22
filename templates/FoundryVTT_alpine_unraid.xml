@@ -10,7 +10,7 @@
   <Support></Support>
   <Project></Project>
   <Overview>test</Overview>
-  <Category>Games:Server</Category>
+  <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL></TemplateURL>
   <Icon>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/d20.png</Icon>
