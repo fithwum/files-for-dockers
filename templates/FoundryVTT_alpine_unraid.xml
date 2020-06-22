@@ -41,7 +41,7 @@
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/FoundryVTT</HostDir>
-      <ContainerDir>/home/foundry</ContainerDir>
+      <ContainerDir>/foundry</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -61,5 +61,5 @@
   <Config Name="Host Port 1" Target="30000" Default="30000" Mode="tcp" Description="Container Port: 30000" Type="Port" Display="always" Required="true" Mask="false">30000</Config>
   <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
   <Config Name="Key 3" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
-  <Config Name="AppData Config Path" Target="/home/foundry" Default="/mnt/user/appdata/FoundryVTT" Mode="rw" Description="Container Path: /home/foundry" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/FoundryVTT</Config>
+  <Config Name="AppData Config Path" Target="/foundry" Default="/mnt/user/appdata/FoundryVTT" Mode="rw" Description="Container Path: /foundry" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/FoundryVTT</Config>
 </Container>
