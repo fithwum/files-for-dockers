@@ -7,8 +7,8 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support></Support>
-  <Project></Project>
+  <Support>https://forums.unraid.net/topic/93944-support-fithwum-foundryvtt/</Support>
+  <Project>https://foundryvtt.com/</Project>
   <Overview>FoundryVTT is a web based Dungeons and Dragons application that allows users to play with others over the internet.  You will have to purchase a copy of foundryvtt from https://foundryvtt.com[br][br]&#xD;
 [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
 [b]/FoundryVTT[/b] is where all configuration files and data will be. You will have to purchase a copy of foundryvtt from https://foundryvtt.com then download the linux version and unpack it to the fvtt folder.
