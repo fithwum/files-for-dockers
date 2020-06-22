@@ -22,8 +22,8 @@ Connect to the server using the host IP address and port 30000 once connected it
   <PostArgs/>
   <CPUset/>
   <DateInstalled/>
-  <DonateText/>
-  <DonateLink/>
+  <DonateText>Buy me a coffee if you like.</DonateText>
+  <DonateLink>https://checkout.square.site/pay/340d93c602a042b8a223a2f7c184a6a2</DonateLink>
   <Description>FoundryVTT is a web based Dungeons and Dragons application that allows users to play with others over the internet.  You will have to purchase a copy of foundryvtt from https://foundryvtt.com[br][br]&#xD;
 [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
 [b]/FoundryVTT[/b] is where all configuration files and data will be. You will have to purchase a copy of foundryvtt from https://foundryvtt.com then download the linux version and unpack it to the fvtt folder.
