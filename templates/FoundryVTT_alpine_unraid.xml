@@ -9,7 +9,11 @@
   <Privileged>false</Privileged>
   <Support></Support>
   <Project></Project>
-  <Overview>test</Overview>
+  <Overview>FoundryVTT is a web based D&D application that allows users to play D&D with others over the internet.[br][br]&#xD;
+[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+[b]/FoundryVTT[/b] is where all configuration files and data will be.[br][br]&#xD;
+[b][u][span style='color: #E80000;']Notes[/span][/u][/b][br]
+Connect to the server using the host IP address and port 30000.[br]</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL></TemplateURL>
@@ -20,7 +24,11 @@
   <DateInstalled/>
   <DonateText/>
   <DonateLink/>
-  <Description>Test</Description>
+  <Description>FoundryVTT is a web based D&D application that allows users to play D&D with others over the internet.[br][br]&#xD;
+[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+[b]/FoundryVTT[/b] is where all configuration files and data will be.[br][br]&#xD;
+[b][u][span style='color: #E80000;']Notes[/span][/u][/b][br]
+Connect to the server using the host IP address and port 30000.[br]</Description>
   <Beta>False</Beta>
   <Date>2020-06-21</Date>
   <Changes>[font size=4][center]foundryvtt-alpine[/center][/font]
