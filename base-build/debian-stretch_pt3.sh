@@ -26,5 +26,8 @@ sleep 1
 echo " "
 echo "INFO ! Removing temp files."
 rm -fr debian-stretch
-rm -fr debian-stretch.tar.bz2
+rm -frv debian-stretch.tar.bz2
+echo " "
+echo "INFO ! Done."
+echo " "
 exit
