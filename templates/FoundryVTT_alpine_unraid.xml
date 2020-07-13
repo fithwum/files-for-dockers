@@ -30,15 +30,19 @@ Connect to the server using the host IP address and port 30000 once connected it
 Connect to the server using the host IP address and port 30000 once connected it will ask you for a licence code.[br][br]&#xD;
 [b][u][span style='color: #E80000;']Notes[/span][/u][/b][br]If you run into permission problems with some files simply restart the docker and it will fix itself. i am working on a propor fix for this problem[br]</Description>
   <Beta>False</Beta>
-  <Date>2020-06-27</Date>
-  <Changes>[font size=4][center]FoundryVTT-alpine[/center][/font]
-[font size=3][b](2020-06-21)[/b][/font]
-&#x00a0;&#x00a0;- First test.
+  <Date>2020-07-13</Date>
+  <Changes>
+[font size=4][center]FoundryVTT-alpine[/center][/font]
+[font size=3][b](2020-07-13)[/b][/font]
+&#x00a0;&#x00a0;- Set template so that server files are in appdata and user files can go to a share of your choice.
 
 [font size=4][center]FoundryVTT-alpine[/center][/font]
 [font size=3][b](2020-06-27)[/b][/font]
 &#x00a0;&#x00a0;- Working release.
 
+[font size=4][center]FoundryVTT-alpine[/center][/font]
+[font size=3][b](2020-06-21)[/b][/font]
+&#x00a0;&#x00a0;- First test.
   </Changes>
   <Networking>
     <Mode>host</Mode>
@@ -53,7 +57,12 @@ Connect to the server using the host IP address and port 30000 once connected it
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/FoundryVTT</HostDir>
-      <ContainerDir>/foundry</ContainerDir>
+      <ContainerDir>/foundry/fvtt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+	<Volume>
+      <HostDir>/mnt/user/</HostDir>
+      <ContainerDir>/foundry/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -71,7 +80,8 @@ Connect to the server using the host IP address and port 30000 once connected it
   </Environment>
   <Labels/>
   <Config Name="Host Port 1" Target="30000" Default="30000" Mode="tcp" Description="Container Port: 30000" Type="Port" Display="always" Required="true" Mask="false">30000</Config>
-  <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
-  <Config Name="Key 3" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
-  <Config Name="AppData Config Path" Target="/foundry" Default="/mnt/user/appdata/FoundryVTT" Mode="rw" Description="Container Path: /foundry" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/FoundryVTT</Config>
+  <Config Name="Data Path" Target="/foundry/data" Default="" Mode="rw" Description="Container Path: /foundry/data" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="AppData Config Path" Target="/foundry/fvtt" Default="/mnt/user/appdata/FoundryVTT" Mode="rw" Description="Container Path: /foundry/fvtt" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/FoundryVTT</Config>
+  <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
+  <Config Name="Key 3" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
 </Container>
