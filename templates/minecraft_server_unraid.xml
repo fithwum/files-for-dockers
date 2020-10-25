@@ -6,6 +6,7 @@
   <Network>host</Network>
   <MyIP/>
   <Shell>sh</Shell>
+  <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Support></Support>
   <Project>https://www.minecraft.net/en-us/</Project>
