@@ -6,6 +6,7 @@
   <Network>host</Network>
   <MyIP/>
   <Shell>sh</Shell>
+  <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/76749-support-fithwum-teamspeakalpine/</Support>
   <Project>https://www.teamspeak.com/</Project>
