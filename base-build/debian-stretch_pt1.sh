@@ -33,6 +33,8 @@ apt-get -y upgrade
 sleep 1
 apt-get -y dist-upgrade
 sleep 1
+apt autoremove -y
+sleep 1
 echo " "
 echo "INFO ! Installing debootstrap,ftp-upload,bash,dirmngr."
 apt-get install -y debootstrap ftp-upload bash dirmngr
