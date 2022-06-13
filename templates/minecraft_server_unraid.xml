@@ -23,7 +23,11 @@
   <DonateLink>https://checkout.square.site/pay/340d93c602a042b8a223a2f7c184a6a2</DonateLink>
   <Description>This docker is for running Minecraft vanilla server version 1.18 and java 17. You can run a modded server you can just do not delete the files that are in the folder.</Description>
   <Beta>False</Beta>
-  <Date>2022-13-13</Date>
+<<<<<<< HEAD
+  <Date>2022-06-13</Date>
+=======
+  <Date>2022-06-13</Date>
+>>>>>>> 8ea521678fc3492e36e45a7eea2ee4ba3a54d516
   <Changes>[font size=4][center]minecraft-debian[/center][/font]
 [font size=3][b](2020-07-01)[/b][/font]
 &#x00a0;&#x00a0;- First Test.
