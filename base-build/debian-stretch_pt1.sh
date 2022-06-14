@@ -28,15 +28,12 @@ sleep 1
 echo " "
 echo "INFO ! Getting system updates."
 apt-get -y update
-sleep 1
 apt-get -y upgrade
-sleep 1
 apt-get -y dist-upgrade
-sleep 1
 apt autoremove -y
-sleep 1
 echo " "
 echo "INFO ! Installing debootstrap,ftp-upload,bash,dirmngr."
+sleep 1
 apt-get install -y debootstrap ftp-upload bash dirmngr
 sleep 1
 echo " "
@@ -44,6 +41,7 @@ echo "INFO ! Downloading debian & selected packages."
 debootstrap --keyring /etc/apt/trusted.gpg.d/debian-archive-stretch-stable.gpg --force-check-gpg --variant=minbase --components=main,contrib,non-free --include=dirmngr,apt-transport-https,wget,bzip2,bash,nano,ca-certificates,software-properties-common --arch=amd64 stretch /debian-stretch http://deb.debian.org/debian/
 echo " "
 echo "INFO ! Filesystem size uncompressed."
+sleep 1
 du --human-readable --summarize debian-stretch
 sleep 5
 echo " "

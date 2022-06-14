@@ -9,7 +9,7 @@ sleep 1
 echo " "
 echo "INFO ! Base image size after cleanup."
 du --human-readable --summarize debian-buster
-sleep 10
+sleep 5
 echo " "
 echo "INFO ! Creating base image archive."
 echo "INFO ! This may take some time."
@@ -18,7 +18,7 @@ sleep 1
 echo " "
 echo "INFO ! Base image archive."
 du --human-readable --summarize debian-buster.tar.bz2
-sleep 10
+sleep 5
 echo " "
 echo "INFO ! Uploading image to ftp server."
 ftp-upload -v -h {IP}:{PORT} -u {USER} --password {PASSWORD} -d /mnt/user/FTP debian-buster.tar.bz2
