@@ -24,12 +24,10 @@
   <Description>This docker is for running Minecraft vanilla server on java 17. If you want to run an older version of Minecraft all you need to do is change the tag from latest to the version that you want to run, currently as far back as 1.16.5.</Description>
   <Beta>False</Beta>
   <Date>2022-06-16</Date>
-  <Changes>[font size=4][center]minecraft-debian[/center][/font]
-
+  <Changes>[font size=4][center]minecraft-debian[/center][/font] \
 [font size=3][b](2022-06-16)[/b][/font]
 &#x00a0;&#x00a0;- Updated base image.
 &#x00a0;&#x00a0;- Added the abillity to change server versions using docker tags.
-
 [font size=3][b](2020-07-01)[/b][/font]
 &#x00a0;&#x00a0;- First Test.
   </Changes>
