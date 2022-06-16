@@ -35,6 +35,7 @@ To authenticate use the privilege key shown in the supervisord.log file in the /
   <Beta>False</Beta>
   <Date>2022-06-13</Date>
   <Changes>[font size=4][center]teamspeak3[/center][/font]
+  
 [font size=3][b](2020-06-24)[/b][/font]
 &#x00a0;&#x00a0;- First creation uses built in DB.
   </Changes>
