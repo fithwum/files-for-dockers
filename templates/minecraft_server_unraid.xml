@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Minecraft</Name>
+  <Name>Minecraft-fithwum</Name>
   <Repository>fithwum/minecraft:latest</Repository>
   <Registry>https://hub.docker.com/r/fithwum/minecraft/</Registry>
   <Network>host</Network>
