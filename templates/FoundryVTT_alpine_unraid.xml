@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>FoundryVTT</Name>
+  <Name>FoundryVTT-fithwum</Name>
   <Repository>fithwum/foundry_vtt</Repository>
   <Registry>https://hub.docker.com/r/fithwum/foundry_vtt/</Registry>
   <Network>host</Network>
