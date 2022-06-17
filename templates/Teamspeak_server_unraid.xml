@@ -46,7 +46,7 @@ To authenticate use the privilege key shown in the supervisord.log file in the /
 
 [font size=3][b](2019-01-03)[/b][/font]
 &#x00a0;&#x00a0;- Added an automatic check for new teamspeak server verstion on startup.
-&#x00a0;&#x00a0;- Added more information output to indicate what is happening in the docker logs.
+&#x00a0;&#x00a0;&#x00a0;- Added more information output to indicate what is happening in the docker logs.
 
 [font size=3][b](2019-01-02)[/b][/font]
 &#x00a0;&#x00a0;- Changed the update process to preserve all settings/files/logs created by user/server.

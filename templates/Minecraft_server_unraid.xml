@@ -28,7 +28,7 @@
 
 [font size=3][b](2022-06-16)[/b][/font]
 &#x00a0;&#x00a0;- Updated base image.
-&#x00a0;&#x00a0;- Added the abillity to change server versions using docker tags.
+&#x00a0;&#x00a0;&#x00a0;- Added the abillity to change server versions using docker tags.
 
 [font size=3][b](2020-07-01)[/b][/font]
 &#x00a0;&#x00a0;- First Test.
