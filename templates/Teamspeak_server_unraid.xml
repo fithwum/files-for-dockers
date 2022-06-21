@@ -8,7 +8,7 @@
   <Shell>sh</Shell>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/76749-support-fithwum-teamspeakalpine/</Support>
+  <Support>https://forums.unraid.net/topic/76749-support-fithwum-teamspeak-server/</Support>
   <Project>https://www.teamspeak.com/</Project>
   <Overview>TeamSpeak is proprietary voice-over-Internet Protocol (VoIP) software that allows computer users to speak on a chat channel with fellow computer users, much like a telephone conference call. A TeamSpeak user will often wear a headset with an integrated microphone. Users use the TeamSpeak client software to connect to a TeamSpeak server of their choice, from there they can join chat channels and discuss things.[br][br]&#xD;
 [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
@@ -18,7 +18,7 @@ Connect to the server using the TeamSpeak client with the host IP address and po
 To authenticate use the privilege key shown in the supervisord.log file in the /ts3-alpine folder.</Overview>
   <Category>Network:Voip</Category>
   <WebUI/>
-  <TemplateURL>https://github.com/fithwum/files-for-dockers/templates/ts3server_alpine_unraid.xml</TemplateURL>
+  <TemplateURL>https://github.com/fithwum/files-for-dockers/templates/Teamspeak_server_unraid.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/Ts3Icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
