@@ -13,8 +13,8 @@
   <Overview>This docker will run a Minecraft vanilla server on java 17. If you want to run an older version of Minecraft all you need to do is change the tag from latest to the version that you want to run, currently as far back as 1.16.5.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL>https://github.com/fithwum/files-for-dockers/templates/Minecraft_server_unraid.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/Minecraft.png</Icon>
+  <TemplateURL>https://github.com/fithwum/files-for-dockers/templates/minecraft_server_unraid.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/minecraft.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>

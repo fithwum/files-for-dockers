@@ -17,7 +17,7 @@ Connect to the server using the host IP address and port 30000 once connected it
 [b][u][span style='color: #E80000;']Notes[/span][/u][/b][br]If you run into permission problems with some files simply restart the docker and it will fix itself. i am working on a propor fix for this problem[br]</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/templates/FoundryVTT_unraid.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/templates/foundry-vtt_unraid.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/d20.png</Icon>
   <ExtraParams/>
   <PostArgs/>
