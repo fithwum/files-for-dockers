@@ -39,11 +39,6 @@
       <Port>
         <HostPort>25565</HostPort>
         <ContainerPort>25565</ContainerPort>
-        <Protocol>udp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>25565</HostPort>
-        <ContainerPort>25565</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
