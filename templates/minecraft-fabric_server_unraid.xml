@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Minecraft</Name>
-  <Repository>fithwum/minecraft:1.19.4</Repository>
-  <Registry>https://hub.docker.com/r/fithwum/minecraft/</Registry>
+  <Name>Minecraft-Fabric</Name>
+  <Repository>fithwum/minecraft-fabric:1.20.1</Repository>
+  <Registry>https://hub.docker.com/r/fithwum/minecraft-fabric/</Registry>
   <Network>host</Network>
   <MyIP/>
   <Shell>sh</Shell>
@@ -10,10 +10,10 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/125134-support-fithwum-minecraft-server/</Support>
   <Project>https://www.minecraft.net/</Project>
-  <Overview>This docker will run a Minecraft vanilla server on java 17. If you want to run an older version of Minecraft all you need to do is change the tag from latest to the version that you want to run, currently as far back as 1.16.</Overview>
+  <Overview>This docker will run a Minecraft Fabric server on java 17.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL>https://github.com/fithwum/files-for-dockers/templates/minecraft_server_unraid.xml</TemplateURL>
+  <TemplateURL>https://github.com/fithwum/files-for-dockers/templates/minecraft-fabric_server_unraid.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/minecraft.png</Icon>
   <ExtraParams/>
   <PostArgs/>
@@ -21,20 +21,16 @@
   <DateInstalled/>
   <DonateText>Buy me a coffee if you like.</DonateText>
   <DonateLink>https://checkout.square.site/pay/340d93c602a042b8a223a2f7c184a6a2</DonateLink>
-  <Description>This docker will run a Minecraft vanilla server on java 17. If you want to run an older version of Minecraft all you need to do is change the tag from latest to the version that you want to run, currently as far back as 1.16.5.</Description>
+  <Description>This docker will run a Minecraft Fabric server on java 17.</Description>
   <Beta>False</Beta>
   <Date>2023-03-23</Date>
-
+  
   <Changes>[font size=4][center]Minecraft[/center][/font]
 
-[font size=3][b](2022-06-16)[/b][/font]
-&#x00a0;&#x00a0;- Updated base image.
-&#x00a0;&#x00a0;&#x00a0;- Added the abillity to change server versions using docker tags.
-
-[font size=3][b](2020-07-01)[/b][/font]
+[font size=3][b](2023-03-23)[/b][/font]
 &#x00a0;&#x00a0;- First Test.
   </Changes>
-  
+
   <Networking>
     <Mode>host</Mode>
     <Publish>
@@ -52,7 +48,7 @@
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/minecraft-server</HostDir>
+      <HostDir>/mnt/user/appdata/minecraft-fabric-server</HostDir>
       <ContainerDir>/MCserver</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -68,18 +64,12 @@
       <Name>PGID</Name>
       <Mode/>
     </Variable>
-	<Variable>
-      <Value>false</Value>
-      <Name>ACCEPT_EULA</Name>
-      <Mode/>
-    </Variable>
   </Environment>
   <Labels/>
   <Config Name="Host Port 1" Target="25565" Default="25565" Mode="udp" Description="Container Port: 25565" Type="Port" Display="always" Required="true" Mask="false">25565</Config>
   <Config Name="Host Port 2" Target="25565" Default="25565" Mode="tcp" Description="Container Port: 25565" Type="Port" Display="always" Required="true" Mask="false">25565</Config>
-  <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
   <Config Name="Save Data" Target="/MCserver/world/" Default="" Mode="rw" Description="Container Path: /MCserver/world/" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="AppData Config Path" Target="/MCserver" Default="/mnt/user/appdata/minecraft-server" Mode="rw" Description="Container Path: /MCserver" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/minecraft-server</Config>
+  <Config Name="AppData Config Path" Target="/MCserver" Default="/mnt/user/appdata/minecraft-fabric-server" Mode="rw" Description="Container Path: /MCserver" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/minecraft-fabric-server</Config>
   <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
   <Config Name="Key 3" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
 </Container>
