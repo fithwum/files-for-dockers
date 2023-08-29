@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Minecraft-Fabric</Name>
-  <Repository>fithwum/minecraft-fabric:1.19.3</Repository>
+  <Repository>fithwum/minecraft-fabric:1.20.1</Repository>
   <Registry>https://hub.docker.com/r/fithwum/minecraft-fabric/</Registry>
   <Network>host</Network>
   <MyIP/>
