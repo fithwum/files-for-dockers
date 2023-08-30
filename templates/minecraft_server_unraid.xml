@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Minecraft</Name>
-  <Repository>fithwum/minecraft:1.19.4</Repository>
+  <Repository>fithwum/minecraft:1.20.1</Repository>
   <Registry>https://hub.docker.com/r/fithwum/minecraft/</Registry>
   <Network>host</Network>
   <MyIP/>
