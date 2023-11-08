@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Minecraft-Fabric</Name>
+  <Name>Minecraft-Fabric-Server</Name>
   <Repository>fithwum/minecraft-fabric:1.20.2</Repository>
   <Registry>https://hub.docker.com/r/fithwum/minecraft-fabric/</Registry>
   <Network>host</Network>
