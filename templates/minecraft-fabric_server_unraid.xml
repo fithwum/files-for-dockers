@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Minecraft-Fabric</Name>
-  <Repository>fithwum/minecraft-fabric:1.20.1</Repository>
+  <Repository>fithwum/minecraft-fabric:1.20.2</Repository>
   <Registry>https://hub.docker.com/r/fithwum/minecraft-fabric/</Registry>
   <Network>host</Network>
   <MyIP/>
@@ -64,6 +64,21 @@
       <Name>PGID</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>ACCEPT_EULA</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0.14.24</Value>
+      <Name>FABRIC_VERSION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0.11.2</Value>
+      <Name>INSTALLER_VERSION</Name>
+      <Mode/>
+    </Variable>    
   </Environment>
   <Labels/>
   <Config Name="Host Port 1" Target="25565" Default="25565" Mode="udp" Description="Container Port: 25565" Type="Port" Display="always" Required="true" Mask="false">25565</Config>
@@ -72,4 +87,7 @@
   <Config Name="AppData Config Path" Target="/MCserver" Default="/mnt/user/appdata/minecraft-fabric-server" Mode="rw" Description="Container Path: /MCserver" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/minecraft-fabric-server</Config>
   <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
   <Config Name="Key 3" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
+  <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Fabric Version" Target="FABRIC_VERSION" Default="0.14.24" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">0.14.24</Config>
+  <Config Name="Installer Version" Target="INSTALLER_VERSION" Default="0.11.2" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">0.11.2</Config>
 </Container>
