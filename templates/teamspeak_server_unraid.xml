@@ -19,7 +19,7 @@ To authenticate use the privilege key shown in the supervisord.log file in the /
   <Category>Network:Voip</Category>
   <WebUI/>
   <TemplateURL>https://github.com/fithwum/files-for-dockers/templates/teamspeak_server_unraid.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/ts-server-icon.png</Icon>
+  <Icon>https://gitlab.fithwum.tech/fithwum/files-for-dockers/-/raw/master/icons/ts-server-icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
