@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Minecraft</Name>
-  <Repository>fithwum/minecraft:1.20.2</Repository>
+  <Repository>fithwum/minecraft:latest</Repository>
   <Registry>https://hub.docker.com/r/fithwum/minecraft/</Registry>
   <Network>host</Network>
   <MyIP/>
@@ -68,15 +68,21 @@
       <Name>PGID</Name>
       <Mode/>
     </Variable>
-	<Variable>
+  	<Variable>
       <Value>false</Value>
       <Name>ACCEPT_EULA</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1.20.2</Value>
+      <Name>MC_VERSION</Name>
       <Mode/>
     </Variable>
   </Environment>
   <Labels/>
   <Config Name="Host Port 1" Target="25565" Default="25565" Mode="udp" Description="Container Port: 25565" Type="Port" Display="always" Required="true" Mask="false">25565</Config>
   <Config Name="Host Port 2" Target="25565" Default="25565" Mode="tcp" Description="Container Port: 25565" Type="Port" Display="always" Required="true" Mask="false">25565</Config>
+  <Config Name="Minecraft Version" Target="MC_VERSION" Default="1.20.2" Mode="" Description="Pick your Minecraft version." Type="Variable" Display="always" Required="true" Mask="false">1.20.2</Config>
   <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
   <Config Name="Save Data" Target="/MCserver/world/" Default="" Mode="rw" Description="Container Path: /MCserver/world/" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="AppData Config Path" Target="/MCserver" Default="/mnt/user/appdata/minecraft-server" Mode="rw" Description="Container Path: /MCserver" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/minecraft-server</Config>
