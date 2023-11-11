@@ -34,7 +34,7 @@ Connect to the server using the TeamSpeak client with the host IP address and po
 To authenticate use the privilege key shown in the supervisord.log file in the /ts3-alpine folder.
 </Description>
   <Beta>False</Beta>
-  <Date>2023-03-23</Date>
+  <Date>2023-11-10</Date>
   <Changes>
 [font size=4][center]Teamspeak[/center][/font]
 
