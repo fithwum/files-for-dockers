@@ -37,13 +37,6 @@
   
   <Networking>
     <Mode>host</Mode>
-    <Publish>
-      <Port>
-        <HostPort>25565</HostPort>
-        <ContainerPort>25565</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
   </Networking>
   <Data>
     <Volume>
@@ -78,11 +71,15 @@
       <Name>MC_VERSION</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>25565</Value>
+      <Name>GAME_PORT</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Host Port 1" Target="25565" Default="25565" Mode="udp" Description="Container Port: 25565" Type="Port" Display="always" Required="true" Mask="false">25565</Config>
-  <Config Name="Host Port 2" Target="25565" Default="25565" Mode="tcp" Description="Container Port: 25565" Type="Port" Display="always" Required="true" Mask="false">25565</Config>
   <Config Name="Minecraft Version" Target="MC_VERSION" Default="1.20.2" Mode="" Description="Pick your Minecraft version." Type="Variable" Display="always" Required="true" Mask="false">1.20.2</Config>
+  <Config Name="Minecraft Port" Target="GAME_PORT" Default="25565" Mode="tcp" Description="Set game port (default: 25565)." Type="Variable" Display="always" Required="true" Mask="false">25565</Config>
   <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
   <Config Name="Save Data" Target="/MCserver/world/" Default="" Mode="rw" Description="Container Path: /MCserver/world/" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="AppData Config Path" Target="/MCserver" Default="/mnt/user/appdata/minecraft-server" Mode="rw" Description="Container Path: /MCserver" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/minecraft-server</Config>
