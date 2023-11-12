@@ -95,11 +95,11 @@
   <Labels/>
   <Config Name="Minecraft Version" Target="MC_VERSION" Default="1.20.2" Mode="" Description="Pick your Minecraft version." Type="Variable" Display="always" Required="true" Mask="false">1.20.2</Config>
   <Config Name="Minecraft Port" Target="GAME_PORT" Default="25565" Mode="tcp" Description="Set game port (default: 25565)." Type="Variable" Display="always" Required="true" Mask="false">25565</Config>
+  <Config Name="Save Data" Target="/MCserver/world/" Default="" Mode="rw" Description="Container Path: /MCserver/world/" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
   <Config Name="Java Xmx" Target="XMX" Default="4G" Mode="" Description="Set java memory." Type="Variable" Display="always" Required="true" Mask="false">4G</Config>
   <Config Name="Java Xms" Target="XMS" Default="2G" Mode="" Description="Set java memory." Type="Variable" Display="always" Required="true" Mask="false">2G</Config>
   <Config Name="Java Xmn" Target="XMN" Default="1G" Mode="" Description="Set java memory." Type="Variable" Display="always" Required="true" Mask="false">1G</Config>
-  <Config Name="Save Data" Target="/MCserver/world/" Default="" Mode="rw" Description="Container Path: /MCserver/world/" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="AppData Config Path" Target="/MCserver" Default="/mnt/user/appdata/minecraft-server" Mode="rw" Description="Container Path: /MCserver" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/minecraft-server</Config>
   <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
   <Config Name="Key 3" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
