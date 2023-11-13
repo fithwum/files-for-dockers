@@ -83,17 +83,17 @@
     </Variable>
     <Variable>
       <Value>4G</Value>
-      <Name>XMX</Name>
+      <Name>XMX_SIZE</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value>2G</Value>
-      <Name>XMS</Name>
+      <Name>XMS_SIZE</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value>1G</Value>
-      <Name>XMN</Name>
+      <Name>XMN_SIZE</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -109,9 +109,9 @@
   <Config Name="Minecraft Port" Target="GAME_PORT" Default="25565" Mode="tcp" Description="Set game port (default: 25565)." Type="Variable" Display="always" Required="true" Mask="false">25565</Config>
   <Config Name="Save Data" Target="/MCserver/world/" Default="" Mode="rw" Description="Container Path: /MCserver/world/" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
-  <Config Name="Java Xmx" Target="XMX" Default="4G" Mode="" Description="Set java memory." Type="Variable" Display="always" Required="true" Mask="false">4G</Config>
-  <Config Name="Java Xms" Target="XMS" Default="2G" Mode="" Description="Set java memory." Type="Variable" Display="always" Required="true" Mask="false">2G</Config>
-  <Config Name="Java Xmn" Target="XMN" Default="1G" Mode="" Description="Set java memory." Type="Variable" Display="always" Required="true" Mask="false">1G</Config>
+  <Config Name="Java Xmx size" Target="XMX_SIZE" Default="4G" Mode="" Description="Set java memory." Type="Variable" Display="always" Required="true" Mask="false">4G</Config>
+  <Config Name="Java Xms size" Target="XMS_SIZE" Default="2G" Mode="" Description="Set java memory." Type="Variable" Display="always" Required="true" Mask="false">2G</Config>
+  <Config Name="Java Xmn size" Target="XMN_SIZE" Default="1G" Mode="" Description="Set java memory." Type="Variable" Display="always" Required="true" Mask="false">1G</Config>
   <Config Name="AppData Config Path" Target="/MCserver" Default="/mnt/user/appdata/minecraft-fabric-server" Mode="rw" Description="Container Path: /MCserver" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/minecraft-fabric-server</Config>
   <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
   <Config Name="Key 3" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
