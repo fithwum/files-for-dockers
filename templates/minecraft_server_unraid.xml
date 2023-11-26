@@ -96,7 +96,7 @@
   <Config Name="Minecraft Version" Target="MC_VERSION" Default="1.20.2" Mode="" Description="Pick your Minecraft version." Type="Variable" Display="always" Required="true" Mask="false">1.20.2</Config>
   <Config Name="Minecraft Port" Target="GAME_PORT" Default="25565" Mode="tcp" Description="Set game port (default: 25565)." Type="Variable" Display="always" Required="true" Mask="false">25565</Config>
   <Config Name="Save Data" Target="/MCserver/world/" Default="" Mode="rw" Description="Container Path: /MCserver/world/" Type="Path" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false|true" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
   <Config Name="Java Xmx size" Target="XMX_SIZE" Default="4G" Mode="" Description="Set java memory." Type="Variable" Display="always" Required="true" Mask="false">4G</Config>
   <Config Name="Java Xms size" Target="XMS_SIZE" Default="2G" Mode="" Description="Set java memory." Type="Variable" Display="always" Required="true" Mask="false">2G</Config>
   <Config Name="Java Xmn size" Target="XMN_SIZE" Default="1G" Mode="" Description="Set java memory." Type="Variable" Display="always" Required="true" Mask="false">1G</Config>
