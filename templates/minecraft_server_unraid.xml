@@ -10,7 +10,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/125134-support-fithwum-minecraft-server/</Support>
   <Project>https://www.minecraft.net/</Project>
-  <Overview>This docker will run a Minecraft vanilla server on java 17.</Overview>
+  <Overview>This docker will run a Minecraft vanilla server on java 21.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL>https://github.com/fithwum/files-for-dockers/templates/minecraft_server_unraid.xml</TemplateURL>
@@ -21,9 +21,9 @@
   <DateInstalled/>
   <DonateText>Buy me a coffee if you like.</DonateText>
   <DonateLink>https://checkout.square.site/pay/340d93c602a042b8a223a2f7c184a6a2</DonateLink>
-  <Description>This docker will run a Minecraft vanilla server on java 17.</Description>
+  <Description>This docker will run a Minecraft vanilla server on java 21.</Description>
   <Beta>False</Beta>
-  <Date>2023-11-13</Date>
+  <Date>2024-06-25</Date>
 
   <Changes>[font size=4][center]Minecraft[/center][/font]
 
