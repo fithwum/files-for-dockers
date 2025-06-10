@@ -58,17 +58,16 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>1.20.9</Value>
+      <Value></Value>
       <Name>VS_VERSION</Name>
       <Mode/>
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="vintage-story Version" Target="VS_VERSION" Default="1.20.9" Mode="" Description="Pick your vintage-story version." Type="Variable" Display="always" Required="true" Mask="false">1.20.2</Config>
+  <Config Name="vintage-story Version" Target="VS_VERSION" Default="" Mode="" Description="Pick your vintage-story version, If needed set a static version to prevent the container from updating (eg: '1.20.9' without quotes). Leave empty for automatic updates." Type="Variable" Display="always" Required="false" Mask="false">1.20.2</Config>
   <Config Name="Save Data" Target="/VSserver/data/" Default="" Mode="rw" Description="Container Path: /VSserver/data/" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="AppData Config Path" Target="/VSserver/server" Default="/mnt/user/appdata/vintage-story-server" Mode="rw" Description="Container Path: /VSserver/server" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/vintage-story-server</Config>
   <Config Name="Vintage Story Release Channel" Target="VS_CHANNEL" Default="" Mode="" Description="Select which release channel you want to use (valid values are 'stable' &amp;amp; 'unstable' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">stable</Config>
-  <Config Name="Static Version" Target="VS_VERSION" Default="" Mode="" Description="If needed set a static version to prevent the container from updating (eg: '1.19.7' without quotes). Leave empty for automatic updates." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
   <Config Name="Key 3" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
 </Container>
