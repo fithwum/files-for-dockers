@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Vintage-Story</Name>
+  <Repository>fithwum/vintage-story:latest</Repository>
+  <Registry>https://hub.docker.com/r/fithwum/vintage-story/</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/125134-support-fithwum-vintage-story-server/</Support>
+  <Project>https://www.vintagestory.at</Project>
+  <Overview>This docker will run a vintage-story server.</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>https://github.com/fithwum/files-for-dockers/templates/vintage-story_server_unraid.xml</TemplateURL>
+  <Icon>https://gitlab.fithwum.tech/fithwum/files-for-dockers/-/raw/master/icons/vintage-story.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>Buy me a coffee if you like.</DonateText>
+  <DonateLink>https://checkout.square.site/pay/340d93c602a042b8a223a2f7c184a6a2</DonateLink>
+  <Description>This docker will run a vintage-story server.</Description>
+  <Beta>False</Beta>
+  <Date>2025-06-10</Date>
+
+  <Changes>[font size=4][center]vintage-story[/center][/font]
+
+[font size=3][b](2025-06-10)[/b][/font]
+&#x00a0;&#x00a0;- First Test.
+  </Changes>
+  
+  <Networking>
+    <Mode>host</Mode>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/VSserver/data/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/vintage-story-server</HostDir>
+      <ContainerDir>/VSserver/server</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1.20.9</Value>
+      <Name>VS_VERSION</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="vintage-story Version" Target="VS_VERSION" Default="1.20.9" Mode="" Description="Pick your vintage-story version." Type="Variable" Display="always" Required="true" Mask="false">1.20.2</Config>
+  <Config Name="Save Data" Target="/VSserver/data/" Default="" Mode="rw" Description="Container Path: /VSserver/data/" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="AppData Config Path" Target="/VSserver/server" Default="/mnt/user/appdata/vintage-story-server" Mode="rw" Description="Container Path: /VSserver/server" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/vintage-story-server</Config>
+  <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
+  <Config Name="Key 3" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
+</Container>
