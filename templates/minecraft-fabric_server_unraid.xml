@@ -14,7 +14,7 @@
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL>https://github.com/fithwum/files-for-dockers/templates/minecraft-fabric_server_unraid.xml</TemplateURL>
-  <Icon>https://gitea.fithwum.tech/fithwum/files-for-dockers/raw/branch/master/icons/minecraft.png</Icon>
+  <Icon>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/minecraft.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>

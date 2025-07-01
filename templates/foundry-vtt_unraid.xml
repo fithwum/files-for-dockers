@@ -18,7 +18,7 @@ Connect to the server using the host IP address and port 30000 once connected it
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/templates/foundry-vtt_unraid.xml</TemplateURL>
-  <Icon>https://gitea.fithwum.tech/fithwum/files-for-dockers/raw/branch/master/icons/d20.png</Icon>
+  <Icon>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/d20.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
