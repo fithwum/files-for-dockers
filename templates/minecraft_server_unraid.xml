@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Minecraft</Name>
-  <Repository>fithwum/minecraft:latest</Repository>
+  <Repository>fithwum/minecraft:vanilla</Repository>
   <Registry>https://hub.docker.com/r/fithwum/minecraft/</Registry>
   <Network>host</Network>
   <MyIP/>
@@ -26,6 +26,10 @@
   <Date>2025-05-19</Date>
 
   <Changes>[font size=4][center]Minecraft[/center][/font]
+
+[font size=3][b](2022-06-16)[/b][/font]
+&#x00a0;&#x00a0;- Updated base image.
+&#x00a0;&#x00a0;&#x00a0;- New tang for vanilla, testing, fabric have been added, the old minecraft fabric template will be removed.
 
 [font size=3][b](2022-06-16)[/b][/font]
 &#x00a0;&#x00a0;- Updated base image.
