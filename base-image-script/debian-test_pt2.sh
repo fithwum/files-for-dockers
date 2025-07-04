@@ -24,7 +24,7 @@ apt-get install --no-install-recommends software-properties-common bash wget cur
 dpkg -l | grep python3-cryptography || echo "[OK] Not installed"
 
 echo "[CHROOT] Removing unnecessary packages..."
-apt-get remove --purge --allow-remove-essential pinentry-curses whiptail kmod iptables iproute2 dmidecode || true
+apt-get remove --purge --allow-remove-essential pinentry-curses whiptail dmidecode || true
 
 echo "[CHROOT] Cleaning up..."
 apt-get clean
