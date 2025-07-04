@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Minecraft</Name>
-  <Repository>fithwum/minecraft:vanilla</Repository>
+  <Repository>gitea.fithwum.tech/fithwum/minecraft:vanilla</Repository>
   <Registry>https://hub.docker.com/r/fithwum/minecraft/</Registry>
   <Network>host</Network>
   <MyIP/>
