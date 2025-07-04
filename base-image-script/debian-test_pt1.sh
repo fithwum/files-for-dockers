@@ -11,7 +11,7 @@ PT3_SCRIPT="debian-test_pt3.sh"
 echo "[INFO] Preparing environment..."
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y debootstrap bash curl wget ftp-upload dirmngr
+apt-get install -y debootstrap bash curl wget ftp-upload dirmngr build-essential libssl-dev libffi-dev python3-dev
 
 echo "[INFO] Downloading extra scripts if missing..."
 for SCRIPT in $PT2_SCRIPT $PT3_SCRIPT; do
