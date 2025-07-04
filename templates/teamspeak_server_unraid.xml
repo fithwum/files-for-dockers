@@ -18,7 +18,7 @@ Connect to the server using the TeamSpeak client with the host IP address and po
 To authenticate use the privilege key shown in the supervisord.log file in the /ts3-"whatever tag you picked" folder.</Overview>
   <Category>Network:Voip</Category>
   <WebUI/>
-  <TemplateURL>https://github.com/fithwum/files-for-dockers/templates/teamspeak_server_unraid.xml</TemplateURL>
+  <TemplateURL>https://gitea.fithwum.tech/fithwum/files-for-dockers/raw/branch/master/templates/teamspeak_server_unraid.xml</TemplateURL>
   <Icon>https://gitea.fithwum.tech/fithwum/files-for-dockers/raw/branch/master/icons/ts-server-icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>

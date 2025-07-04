@@ -13,7 +13,7 @@
   <Overview>This docker will run a Minecraft vanilla server on java 21.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL>https://github.com/fithwum/files-for-dockers/templates/minecraft_server_unraid.xml</TemplateURL>
+  <TemplateURL>https://gitea.fithwum.tech/fithwum/files-for-dockers/raw/branch/master/templates/minecraft_server_unraid.xml</TemplateURL>
   <Icon>https://gitea.fithwum.tech/fithwum/files-for-dockers/raw/branch/master/icons/minecraft.png</Icon>
   <ExtraParams/>
   <PostArgs/>
