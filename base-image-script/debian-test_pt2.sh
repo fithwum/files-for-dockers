@@ -10,6 +10,8 @@ apt-get install software-properties-common bash wget curl nano python3 python3-p
 
 dpkg -l | grep python3-cryptography || echo "[OK] Not installed"
 
+sleep 30
+
 echo "[CHROOT] Removing unnecessary packages..."
 apt-get remove --purge --allow-remove-essential pinentry-curses whiptail kmod iptables iproute2 dmidecode || true
 
