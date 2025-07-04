@@ -6,7 +6,7 @@ echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/10-assume_yes
 apt-get update
 apt-get upgrade
 
-apt-get install software-properties-common bash wget curl nano python3 python3-pip python3-venv locales
+apt-get install software-properties-common bash wget curl nano python3 python3-pip python3-venv locales node npm docker
 
 dpkg -l | grep python3-cryptography || echo "[OK] Not installed"
 
