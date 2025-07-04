@@ -7,7 +7,7 @@ apt-get upgrade
 
 echo "[CHROOT] Installing Node.js..."
 curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
-apt-get install nodejs
+apt-get install --no-install-recommends nodejs
 
 echo "[CHROOT] Installing Docker..."
 apt-get install ca-certificates curl gnupg lsb-release
@@ -18,8 +18,8 @@ echo \
   $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
 apt-get update
 
-apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-apt-get install software-properties-common bash wget curl nano python3 python3-pip python3-venv locales
+apt-get install --no-install-recommends docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+apt-get install --no-install-recommends software-properties-common bash wget curl nano python3 python3-pip python3-venv locales
 
 dpkg -l | grep python3-cryptography || echo "[OK] Not installed"
 
