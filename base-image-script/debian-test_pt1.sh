@@ -26,7 +26,7 @@ echo "[INFO] Bootstrapping Debian $DEBIAN_RELEASE..."
 debootstrap \
   --variant=minbase \
   --components=main,contrib,non-free \
-  --include=ca-certificates,software-properties-common,bash,wget,curl,nano,python3,locales \
+  --include=apt,ca-certificates \
   --arch=amd64 \
   "$DEBIAN_RELEASE" "$ROOTFS_DIR" http://deb.debian.org/debian/
 
