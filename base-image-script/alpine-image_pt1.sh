@@ -1,4 +1,6 @@
 #!/bin/bash
+# Copyright (c) 2025 fithwum
+# All rights reserved
 set -e
 
 # Alpine version

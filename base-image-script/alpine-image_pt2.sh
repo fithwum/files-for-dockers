@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+# Copyright (c) 2025 fithwum
+# All rights reserved
 echo "[CHROOT] Inside Alpine rootfs"
 
 echo "[CHROOT] Updating system..."

@@ -1,59 +1,48 @@
 #!/bin/bash
-# Copyright (c) 2018 fithwum
+# Copyright (c) 2025 fithwum
 # All rights reserved
+set -e
+set -o pipefail
 
-RELEASE=stable
+DEBIAN_RELEASE="bookworm"
+ROOTFS_DIR="debian-${DEBIAN_RELEASE}"
+SCRIPTS_URL="https://raw.githubusercontent.com/fithwum/files-for-dockers/refs/heads/master/base-image-script/"
+PT2_SCRIPT="debian-${DEBIAN_RELEASE}_pt2.sh"
+PT3_SCRIPT="debian-${DEBIAN_RELEASE}_pt3.sh"
 
-echo " "
-echo "INFO ! Downloading other parts of the script if needed."
-if [ -e /debian-bookworm_pt2.sh ]
-	then
-		echo "INFO ! debian-bookworm_pt2.sh found ... will not download."
-	else
-		echo " "
-		echo "WARNING ! debian-bookworm_pt2.sh not found ... will download new copy."
-			wget --no-cache https://raw.githubusercontent.com/fithwum/files-for-dockers/refs/heads/master/base-image-script/debian-bookworm_pt2.sh -O /debian-bookworm_pt2.sh
-			chmod +x debian-bookworm_pt2.sh
-fi
-if [ -e /debian-bookworm_pt3.sh ]
-	then
-		echo "INFO ! debian-bookworm_pt3.sh found ... will not download."
-	else
-		echo " "
-		echo "WARNING ! debian-bookworm_pt3.sh not found ... will download new copy."
-			wget --no-cache https://raw.githubusercontent.com/fithwum/files-for-dockers/refs/heads/master/base-image-script/debian-bookworm_pt3.sh -O /debian-bookworm_pt3.sh
-			chmod +x debian-bookworm_pt3.sh
-fi
-sleep 1
-echo " "
-echo "INFO ! Getting system updates."
-apt-get -y update
-apt-get -y upgrade
-apt-get -y dist-upgrade
-apt autoremove -y
-echo " "
-echo "INFO ! Installing debootstrap,ftp-upload,bash,dirmngr,curl."
-sleep 1
-apt-get install -y debootstrap ftp-upload bash dirmngr curl
-sleep 1
-echo " "
-echo "INFO ! Downloading debian & selected packages."
-debootstrap --force-check-gpg --variant=minbase --components=main,contrib,non-free --include=dirmngr,apt-transport-https,bash,software-properties-common,ca-certificates,wget,curl,nano --arch=amd64 bookworm /debian-bookworm http://deb.debian.org/debian/
-echo " "
-echo "INFO ! Filesystem size uncompressed."
-sleep 1
-du --human-readable --summarize debian-bookworm
-sleep 5
-echo " "
-echo "INFO ! Mounting folders for root."
-mount --bind /dev debian-bookworm/dev
-mount --bind /dev/pts debian-bookworm/dev/pts
-mount --bind /proc debian-bookworm/proc
-mount --bind /sys debian-bookworm/sys
-sleep 1
-cp -v debian-bookworm_pt2.sh /debian-bookworm
-echo " "
-echo "INFO ! Changeing to new root."
-sleep 1
-chroot debian-bookworm
-exit
+echo "[INFO] Preparing environment..."
+apt-get update -y
+apt-get upgrade -y
+apt-get install -y --no-install-recommends debootstrap bash curl wget ftp-upload dirmngr
+
+echo "[INFO] Downloading extra scripts if missing..."
+for SCRIPT in $PT2_SCRIPT $PT3_SCRIPT; do
+    if [ ! -f "./$SCRIPT" ]; then
+        echo "[INFO] Downloading $SCRIPT..."
+        wget --no-cache "$SCRIPTS_URL/$SCRIPT" -O "./$SCRIPT"
+        chmod +x "./$SCRIPT"
+    fi
+done
+
+echo "[INFO] Bootstrapping Debian $DEBIAN_RELEASE..."
+debootstrap \
+  --variant=minbase \
+  --components=main,contrib,non-free \
+  --include=apt,ca-certificates \
+  --arch=amd64 \
+  "$DEBIAN_RELEASE" "$ROOTFS_DIR" http://deb.debian.org/debian/
+
+echo "[INFO] Mounting system directories..."
+for dir in dev dev/pts proc sys; do
+    mount --bind /$dir "$ROOTFS_DIR/$dir"
+done
+
+echo "[INFO] Copying pt2 script into chroot..."
+cp "./$PT2_SCRIPT" "$ROOTFS_DIR/root/$PT2_SCRIPT"
+chmod +x "$ROOTFS_DIR/root/$PT2_SCRIPT"
+
+echo "[INFO] Entering chroot. Type 'exit' when done."
+chroot "$ROOTFS_DIR" /root/$PT2_SCRIPT
+
+echo "[INFO] Running pt3 for packaging and upload..."
+./$PT3_SCRIPT "$ROOTFS_DIR"

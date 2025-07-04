@@ -1,4 +1,6 @@
 #!/bin/bash
+# Copyright (c) 2025 fithwum
+# All rights reserved
 echo "[CHROOT] Configuring Debian system..."
 echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/10-assume_yes
 
