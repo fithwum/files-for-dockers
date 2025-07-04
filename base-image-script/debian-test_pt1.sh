@@ -4,9 +4,9 @@ set -o pipefail
 
 DEBIAN_RELEASE="bookworm"
 ROOTFS_DIR="debian-${DEBIAN_RELEASE}"
-SCRIPTS_URL="https://raw.githubusercontent.com/fithwum/files-for-dockers/refs/heads/master/base-image-script"
-PT2_SCRIPT="debian-base_pt2.sh"
-PT3_SCRIPT="debian-base_pt3.sh"
+SCRIPTS_URL="https://raw.githubusercontent.com/fithwum/files-for-dockers/refs/heads/master/base-image-script/"
+PT2_SCRIPT="debian-test_pt2.sh"
+PT3_SCRIPT="debian-test_pt3.sh"
 
 echo "[INFO] Preparing environment..."
 apt-get update -y
