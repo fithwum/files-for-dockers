@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Maintainer>
-  <Icon>https://raw.githubusercontent.com/fithwum/files-for-dockers/master/icons/fithwum.png</Icon>
+  <Icon>https://gitea.fithwum.tech/fithwum/files-for-dockers/raw/branch/master/icons/fithwum.png</Icon>
   <Profile>
     I have made a few dockers now.
-    Might make others as i think of them/learn how.
+    Might make others when and if they are needed.
   </Profile>
   <DonateLink>https://checkout.square.site/pay/340d93c602a042b8a223a2f7c184a6a2</DonateLink>
   <DonateText>Buy me a coffee if you like.</DonateText>
