@@ -12,7 +12,7 @@ if [ -e /debian-bullseye_pt2.sh ]
 	else
 		echo " "
 		echo "WARNING ! debian-bullseye_pt2.sh not found ... will download new copy."
-			wget --no-cache https://raw.githubusercontent.com/fithwum/base-image/refs/heads/main/build-script/debian-bullseye_pt2.sh -O /debian-bullseye_pt2.sh
+			wget --no-cache https://raw.githubusercontent.com/fithwum/files-for-dockers/refs/heads/master/base-image-script/debian-bullseye_pt2.sh -O /debian-bullseye_pt2.sh
 			chmod +x debian-bullseye_pt2.sh
 fi
 if [ -e /debian-bullseye_pt3.sh ]
@@ -21,7 +21,7 @@ if [ -e /debian-bullseye_pt3.sh ]
 	else
 		echo " "
 		echo "WARNING ! debian-bullseye_pt3.sh not found ... will download new copy."
-			wget --no-cache https://raw.githubusercontent.com/fithwum/base-image/refs/heads/main/build-script/debian-bullseye_pt3.sh -O /debian-bullseye_pt3.sh
+			wget --no-cache https://raw.githubusercontent.com/fithwum/files-for-dockers/refs/heads/master/base-image-script/debian-bullseye_pt3.sh -O /debian-bullseye_pt3.sh
 			chmod +x debian-bullseye_pt3.sh
 fi
 sleep 1
