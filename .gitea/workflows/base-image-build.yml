@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-    paths:
-      - 'base-image-script/**'
+#    paths:
+#      - 'base-image-script/**'
 
   schedule:
     - cron: '0 12 * * 0'
