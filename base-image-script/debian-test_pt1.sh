@@ -8,7 +8,7 @@ DEBIAN_RELEASE="bookworm"
 ROOTFS_DIR="debian-${DEBIAN_RELEASE}"
 SCRIPTS_URL="https://gitea.fithwum.tech/fithwum/files-for-dockers/raw/branch/master/base-image-script/"
 PT2_SCRIPT="debian-test_pt2.sh"
-PT3_SCRIPT="debian-test_pt3.sh"
+PT3_SCRIPT="debian-build_pt3.sh"
 
 echo "[INFO] Preparing environment..."
 apt-get update -y

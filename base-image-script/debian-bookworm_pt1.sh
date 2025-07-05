@@ -8,7 +8,7 @@ DEBIAN_RELEASE="bookworm"
 ROOTFS_DIR="debian-${DEBIAN_RELEASE}"
 SCRIPTS_DIR="base-image-script"
 PT2_SCRIPT="debian-${DEBIAN_RELEASE}_pt2.sh"
-PT3_SCRIPT="debian-${DEBIAN_RELEASE}_pt3.sh"
+PT3_SCRIPT="debian-build_pt3.sh"
 
 echo "[INFO] Preparing environment..."
 apt-get update -y
