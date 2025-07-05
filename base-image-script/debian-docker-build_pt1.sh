@@ -6,7 +6,7 @@ set -o pipefail
 
 DEBIAN_RELEASE="bookworm"
 ROOTFS_DIR="debian-${DEBIAN_RELEASE}"
-SCRIPTS_URL="https://raw.githubusercontent.com/fithwum/files-for-dockers/refs/heads/master/base-image-script/"
+SCRIPTS_URL="https://gitea.fithwum.tech/fithwum/files-for-dockers/raw/branch/master/base-image-script/"
 PT2_SCRIPT="debian-docker-build_pt2.sh"
 PT3_SCRIPT="debian-docker-build_pt3.sh"
 
