@@ -51,10 +51,16 @@ jobs:
           mkdir -p upload-repo/${{ matrix.version }}
           find upload-repo/${{ matrix.version }} -name '*.tar.bz2' -type f -delete
 
-          # Copy new tarball to version folder
-          cp *.tar.bz2 upload-repo/${{ matrix.version }}/
+          # Safely copy tarballs (if any)
+          found=$(find . -maxdepth 1 -name '*.tar.bz2')
+          if [ -n "$found" ]; then
+            cp $found upload-repo/${{ matrix.version }}/
 
-          cd upload-repo
-          git add ${{ matrix.version }}/*.tar.bz2
-          git commit -m "Update ${{ matrix.version }} base image on $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-          git push
+            cd upload-repo
+            git add ${{ matrix.version }}/*.tar.bz2
+            git commit -m "Update ${{ matrix.version }} base image on $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            git push
+          else
+            echo "[WARNING] No .tar.bz2 archive found in workspace!"
+            exit 1
+          fi
