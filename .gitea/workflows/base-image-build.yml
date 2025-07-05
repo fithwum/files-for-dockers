@@ -45,7 +45,7 @@ jobs:
           git config --global user.name "${{ secrets.GIT_USERNAME }}"
           git config --global user.email "${{ secrets.GIT_EMAIL }}"
 
-          git clone "${{ secrets.GITEA_REPO_URL }}" upload-repo
+          git clone "${{ secrets.REPO_URL }}" upload-repo
 
           # Ensure target folder exists and clean old tarballs
           mkdir -p upload-repo/${{ matrix.version }}
