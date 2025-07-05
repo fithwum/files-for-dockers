@@ -13,7 +13,7 @@ PT3_SCRIPT="debian-${DEBIAN_RELEASE}_pt3.sh"
 echo "[INFO] Preparing environment..."
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y --no-install-recommends debootstrap bash curl wget dirmngr
+apt-get install -y --no-install-recommends debootstrap bash curl wget dirmngr bzip2
 
 for SCRIPT in $PT2_SCRIPT $PT3_SCRIPT; do
     if [ ! -f "./${SCRIPTS_DIR}/$SCRIPT" ]; then
