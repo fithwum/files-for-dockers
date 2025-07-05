@@ -1,19 +1,26 @@
 #!/bin/bash
-# Copyright (c) 2018 fithwum
+# Copyright (c) 2025 fithwum
 # All rights reserved
+echo "[CHROOT] Configuring Debian system..."
+echo 'APT::Get::Assume-Yes "true";' > /etc/apt/apt.conf.d/10-assume_yes
 
-echo " "
-echo "APT::Get::Assume-Yes \"true\";" | tee /etc/apt/apt.conf.d/10-assume_yes
-sleep 1
-echo " "
-echo "INFO ! Removeing unnecessary packages."
-apt-get remove --allow-remove-essential pinentry-curses whiptail kmod iptables iproute2 dmidecode
-sleep 1
-echo " "
-echo "INFO ! Cleanup."
+apt-get update
+apt-get upgrade
+
+apt-get install --no-install-recommends software-properties-common bash wget curl nano locales
+
+echo "[CHROOT] Generating locales..."
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+locale-gen
+update-locale LANG=en_US.UTF-8
+
+echo "[CHROOT] Removing unnecessary packages..."
+apt-get remove --purge --allow-remove-essential pinentry-curses whiptail kmod iptables iproute2 dmidecode || true
+
+echo "[CHROOT] Cleaning up..."
 apt-get clean
-find /var/lib/apt/lists/ -maxdepth 2 -type f -delete
-sleep 1
-echo " "
-echo "INFO ! Type "exit" and reboot for final steps."
+apt-get install -f
+find /var/lib/apt/lists/ -type f -delete
+
+echo "[CHROOT] Done. Type 'exit' to return."
 exit

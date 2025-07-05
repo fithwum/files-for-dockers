@@ -1,33 +1,28 @@
 #!/bin/bash
-# Copyright (c) 2018 fithwum
+# Copyright (c) 2025 fithwum
 # All rights reserved
+set -e
 
-echo " "
-echo "INFO ! Cleaning up pt2 of script from base image."
-rm -frv /debian-bullseye/debian-bullseye_pt2.sh
-sleep 1
-echo " "
-echo "INFO ! Base image size after cleanup."
-du --human-readable --summarize debian-bullseye
-sleep 5
-echo " "
-echo "INFO ! Creating base image archive."
-echo "INFO ! This may take some time."
-tar -cjf debian-bullseye.tar.bz2 --directory debian-bullseye .
-sleep 1
-echo " "
-echo "INFO ! Base image archive."
-du --human-readable --summarize debian-bullseye.tar.bz2
-sleep 5
-echo " "
-echo "INFO ! Uploading image to ftp server."
-ftp-upload -v -h {IP}:{PORT} -u {USER} --password {PASSWORD} -d /mnt/user/FTP debian-bullseye.tar.bz2
-sleep 1
-echo " "
-echo "INFO ! Removing temp files."
-rm -fr debian-bullseye
-rm -frv debian-bullseye.tar.bz2
-echo " "
-echo "INFO ! Done."
-echo " "
-exit
+ROOTFS_DIR="${1:-debian-bullseye}"
+TARBALL="${ROOTFS_DIR}.tar.bz2"
+
+echo "[INFO] Attempting to unmount system directories (ignore errors)..."
+for dir in sys proc dev/pts dev; do
+    umount -lf "$ROOTFS_DIR/$dir" 2>/dev/null || true
+done
+
+echo "[INFO] Removing chroot script..."
+rm -f "$ROOTFS_DIR/root/"debian-*_pt2.sh 2>/dev/null || true
+
+echo "[INFO] Rootfs size:"
+du -sh "$ROOTFS_DIR"
+
+echo "[INFO] Creating compressed base image..."
+tar -cjf "$TARBALL" -C "$ROOTFS_DIR" .
+
+echo "[INFO] Image archive size:"
+du -sh "$TARBALL"
+
+# DO NOT DELETE TARBALL — needed by Gitea Action
+# DO NOT UPLOAD HERE — handled by workflow
+echo "[INFO] Leaving tarball for CI to upload: $TARBALL"

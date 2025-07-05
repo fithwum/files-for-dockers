@@ -6,15 +6,15 @@ set -e
 ROOTFS_DIR="${1:-debian-bookworm}"
 TARBALL="${ROOTFS_DIR}.tar.bz2"
 
-echo "[INFO] Unmounting system directories..."
+echo "[INFO] Attempting to unmount system directories (ignore errors)..."
 for dir in sys proc dev/pts dev; do
-    umount -lf "$ROOTFS_DIR/$dir"
+    umount -lf "$ROOTFS_DIR/$dir" 2>/dev/null || true
 done
 
 echo "[INFO] Removing chroot script..."
-rm -f "$ROOTFS_DIR/root/debian-base_pt2.sh"
+rm -f "$ROOTFS_DIR/root/"debian-*_pt2.sh 2>/dev/null || true
 
-echo "[INFO] Showing rootfs size..."
+echo "[INFO] Rootfs size:"
 du -sh "$ROOTFS_DIR"
 
 echo "[INFO] Creating compressed base image..."
@@ -23,11 +23,6 @@ tar -cjf "$TARBALL" -C "$ROOTFS_DIR" .
 echo "[INFO] Image archive size:"
 du -sh "$TARBALL"
 
-# Optional: Upload via FTP
-# ftp-upload -v -h "$HOST" -u "$USER" --password "$PASS" -d /target/dir "$TARBALL"
-
-echo "[INFO] Cleaning up..."
-rm -rf "$ROOTFS_DIR"
-rm -f "$TARBALL"
-
-echo "[INFO] Done."
+# DO NOT DELETE TARBALL — needed by Gitea Action
+# DO NOT UPLOAD HERE — handled by workflow
+echo "[INFO] Leaving tarball for CI to upload: $TARBALL"

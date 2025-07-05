@@ -1,59 +1,37 @@
 #!/bin/bash
-# Copyright (c) 2018 fithwum
+# Copyright (c) 2025 fithwum
 # All rights reserved
+set -e
+set -o pipefail
 
-RELEASE=stable
+DEBIAN_RELEASE="buster"
+ROOTFS_DIR="debian-${DEBIAN_RELEASE}"
+SCRIPTS_DIR="base-image-script"
+PT2_SCRIPT="debian-${DEBIAN_RELEASE}_pt2.sh"
+PT3_SCRIPT="debian-${DEBIAN_RELEASE}_pt3.sh"
 
-echo " "
-echo "INFO ! Downloading other parts of the script if needed."
-if [ -e /debian-buster_pt2.sh ]
-	then
-		echo "INFO ! debian-buster_pt2.sh found ... will not download."
-	else
-		echo " "
-		echo "WARNING ! debian-buster_pt2.sh not found ... will download new copy."
-			wget --no-cache https://raw.githubusercontent.com/fithwum/files-for-dockers/refs/heads/master/base-image-script/debian-buster_pt2.sh -O /debian-buster_pt2.sh
-			chmod +x debian-buster_pt2.sh
-fi
-if [ -e /debian-buster_pt3.sh ]
-	then
-		echo "INFO ! debian-buster_pt3.sh found ... will not download."
-	else
-		echo " "
-		echo "WARNING ! debian-buster_pt3.sh not found ... will download new copy."
-			wget --no-cache https://raw.githubusercontent.com/fithwum/files-for-dockers/refs/heads/master/base-image-script/debian-buster_pt3.sh -O /debian-buster_pt3.sh
-			chmod +x debian-buster_pt3.sh
-fi
-sleep 1
-echo " "
-echo "INFO ! Getting system updates."
-apt-get -y update
-apt-get -y upgrade
-apt-get -y dist-upgrade
-apt autoremove -y
-echo " "
-echo "INFO ! Installing debootstrap,ftp-upload,bash,dirmngr,curl."
-sleep 1
-apt-get install -y debootstrap ftp-upload bash dirmngr curl
-sleep 1
-echo " "
-echo "INFO ! Downloading debian & selected packages."
-debootstrap --keyring /etc/apt/trusted.gpg.d/debian-archive-buster-stable.gpg --force-check-gpg --variant=minbase --components=main,contrib,non-free --include=dirmngr,apt-transport-https,bash,software-properties-common,ca-certificates,wget,curl,nano --arch=amd64 buster /debian-buster http://deb.debian.org/debian/
-echo " "
-echo "INFO ! Filesystem size uncompressed."
-sleep 1
-du --human-readable --summarize debian-buster
-sleep 5
-echo " "
-echo "INFO ! Mounting folders for root."
-mount --bind /dev debian-buster/dev
-mount --bind /dev/pts debian-buster/dev/pts
-mount --bind /proc debian-buster/proc
-mount --bind /sys debian-buster/sys
-sleep 1
-cp -v debian-buster_pt2.sh /debian-buster
-echo " "
-echo "INFO ! Changeing to new root."
-sleep 1
-chroot debian-buster
-exit
+echo "[INFO] Preparing environment..."
+apt-get update -y
+apt-get upgrade -y
+apt-get install -y --no-install-recommends debootstrap bash curl wget dirmngr
+
+for SCRIPT in $PT2_SCRIPT $PT3_SCRIPT; do
+    if [ ! -f "./${SCRIPTS_DIR}/$SCRIPT" ]; then
+        echo "[ERROR] Missing script: ${SCRIPTS_DIR}/$SCRIPT"
+        exit 1
+    fi
+done
+
+echo "[INFO] Bootstrapping Debian $DEBIAN_RELEASE rootfs..."
+debootstrap --variant=minbase --components=main,contrib,non-free --include=apt,ca-certificates --arch=amd64 "$DEBIAN_RELEASE" "$ROOTFS_DIR" http://deb.debian.org/debian/
+
+for dir in dev dev/pts proc sys; do
+    mount --bind "/$dir" "$ROOTFS_DIR/$dir"
+done
+
+cp "./${SCRIPTS_DIR}/$PT2_SCRIPT" "$ROOTFS_DIR/root/$PT2_SCRIPT"
+chmod +x "$ROOTFS_DIR/root/$PT2_SCRIPT"
+
+chroot "$ROOTFS_DIR" /root/$PT2_SCRIPT
+
+bash "./${SCRIPTS_DIR}/$PT3_SCRIPT" "$ROOTFS_DIR"
