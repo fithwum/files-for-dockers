@@ -1,33 +1,33 @@
 #!/bin/bash
-# Copyright (c) 2018 fithwum
+# Copyright (c) 2025 fithwum
 # All rights reserved
+set -e
 
-echo " "
-echo "INFO ! Cleaning up pt2 of script from base image."
-rm -frv /debian-bookworm/debian-bookworm_pt2.sh
-sleep 1
-echo " "
-echo "INFO ! Base image size after cleanup."
-du --human-readable --summarize debian-bookworm
-sleep 5
-echo " "
-echo "INFO ! Creating base image archive."
-echo "INFO ! This may take some time."
-tar -cjf debian-bookworm.tar.bz2 --directory debian-bookworm .
-sleep 1
-echo " "
-echo "INFO ! Base image archive."
-du --human-readable --summarize debian-bookworm.tar.bz2
-sleep 5
-echo " "
-echo "INFO ! Uploading image to ftp server."
-ftp-upload -v -h {IP}:{PORT} -u {USER} --password {PASSWORD} -d /mnt/user/FTP debian-bookworm.tar.bz2
-sleep 1
-echo " "
-echo "INFO ! Removing temp files."
-rm -fr debian-bookworm
-rm -frv debian-bookworm.tar.bz2
-echo " "
-echo "INFO ! Done."
-echo " "
-exit
+ROOTFS_DIR="${1:-debian-bookworm}"
+TARBALL="${ROOTFS_DIR}.tar.bz2"
+
+echo "[INFO] Unmounting system directories..."
+for dir in sys proc dev/pts dev; do
+    umount -lf "$ROOTFS_DIR/$dir"
+done
+
+echo "[INFO] Removing chroot script..."
+rm -f "$ROOTFS_DIR/root/debian-base_pt2.sh"
+
+echo "[INFO] Showing rootfs size..."
+du -sh "$ROOTFS_DIR"
+
+echo "[INFO] Creating compressed base image..."
+tar -cjf "$TARBALL" -C "$ROOTFS_DIR" .
+
+echo "[INFO] Image archive size:"
+du -sh "$TARBALL"
+
+# Optional: Upload via FTP
+# ftp-upload -v -h "$HOST" -u "$USER" --password "$PASS" -d /target/dir "$TARBALL"
+
+echo "[INFO] Cleaning up..."
+rm -rf "$ROOTFS_DIR"
+rm -f "$TARBALL"
+
+echo "[INFO] Done."
