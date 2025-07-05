@@ -31,7 +31,9 @@ jobs:
             bash base-image-script/debian-${{ matrix.version }}_pt1.sh
 
       - name: List output archive
-        run: ls -lh *.tar.bz2
+        run: |
+          echo "[INFO] Looking for tarballs in workspace..."
+          find . -name '*.tar.bz2' -ls
 
       - name: Clone and push to Gitea repo
         run: |
