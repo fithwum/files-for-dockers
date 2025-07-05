@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-debian-variants:
-    runs-on: docker
+    runs-on: docker-build
 
     strategy:
       matrix:
