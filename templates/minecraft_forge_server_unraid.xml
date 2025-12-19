@@ -21,7 +21,7 @@
   <DateInstalled/>
   <DonateText>Buy me a coffee if you like.</DonateText>
   <DonateLink>https://checkout.square.site/pay/340d93c602a042b8a223a2f7c184a6a2</DonateLink>
-  <Description>This docker will run a Minecraft fabric server on java 21.</Description>
+  <Description>This docker will run a Minecraft forge server on java 21.</Description>
   <Beta>False</Beta>
   <Date>2025-12-18</Date>
 
@@ -29,7 +29,7 @@
 
 [font size=3][b](2022-06-16)[/b][/font]
 &#x00a0;&#x00a0;- Updated base image.
-&#x00a0;&#x00a0;&#x00a0;- New tang for fabric, vanilla, testing, fabric have been added, the old minecraft fabric template will be removed.
+&#x00a0;&#x00a0;&#x00a0;- New tags for fabric, vanilla, testing, forge have been added, the old minecraft fabric template will be removed.
 
 [font size=3][b](2022-06-16)[/b][/font]
 &#x00a0;&#x00a0;- Updated base image.
