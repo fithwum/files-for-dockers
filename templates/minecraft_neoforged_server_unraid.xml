@@ -98,14 +98,14 @@
   </Environment>
   <Labels/>
   <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
-  <Config Name="backups" Target="/MCserver/backups/" Default="" Mode="rw,slave" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Game_Saves/Minecraft/fabric/1.19.2/backups/</Config>
+  <Config Name="backups" Target="/MCserver/backups/" Default="" Mode="rw,slave" Description="" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="neoforged version" Target="NEOFORGED_VERSION" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="server version" Target="SERVER_VERSION" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="game port" Target="GAME_PORT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">25566</Config>
-  <Config Name="XMX size" Target="XMX_SIZE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">18G</Config>
-  <Config Name="XMS size" Target="XMS_SIZE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">4G</Config>
+  <Config Name="XMX size" Target="XMX_SIZE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">8G</Config>
+  <Config Name="XMS size" Target="XMS_SIZE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">3G</Config>
   <Config Name="XMN size" Target="XMN_SIZE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">1G</Config>
-  <Config Name="AppData Config Path" Target="/MCserver" Default="/mnt/user/appdata/minecraft-server" Mode="rw" Description="" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/minecraft-fabric-1.19.2-server</Config>
+  <Config Name="AppData Config Path" Target="/MCserver" Default="/mnt/user/appdata/minecraft-server" Mode="rw" Description="" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/minecraft-neoforged-server</Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
 </Container>
