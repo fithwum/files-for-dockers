@@ -102,7 +102,7 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false|true" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="backups" Target="/MCserver/backups/" Default="" Mode="rw,slave" Description="" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="forge version" Target="FORGE_VERSION" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="MC version" Target="MC_VERSION" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
