@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Teamspeak</Name>
+  <Name>TeamSpeak3-Server</Name>
   <Repository>gitea.fithwum.tech/fithwum/teamspeak-server:basic</Repository>
   <Registry>https://hub.docker.com/r/fithwum/teamspeak-server/</Registry>
   <Network>host</Network>
