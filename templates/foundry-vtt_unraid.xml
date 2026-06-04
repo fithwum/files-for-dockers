@@ -31,7 +31,7 @@ Connect to the server using the host IP address and port 30000 once connected it
 Connect to the server using the host IP address and port 30000 once connected it will ask you for a licence code.[br][br]&#xD;
 [b][u][span style='color: #E80000;']Notes[/span][/u][/b][br]If you run into permission problems with some files simply restart the docker and it will fix itself. i am working on a propor fix for this problem[br]</Description>
   <Beta>False</Beta>
-  <Date>2025-07-04</Date>
+  <Date>2026-06-04</Date>
   <Changes>
 [font size=4][center]FoundryVTT[/center][/font]
 
@@ -77,8 +77,14 @@ Connect to the server using the host IP address and port 30000 once connected it
       <Name>PGID</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>13.351</Value>
+      <Name>FOUNDRYVTT_VERSION</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
+  <Config Name="FoundryVTT Version" Target="FOUNDRYVTT_VERSION" Default="13.351" Mode="" Description="Pick your FoundryVTT version." Type="Variable" Display="always" Required="true" Mask="false">13.351</Config>
   <Config Name="Host Port 1" Target="30000" Default="30000" Mode="tcp" Description="Container Port: 30000" Type="Port" Display="always" Required="true" Mask="false">30000</Config>
   <Config Name="Data Path" Target="/foundry/data" Default="" Mode="rw" Description="Container Path: /foundry/data" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="AppData Config Path" Target="/foundry/fvtt" Default="/mnt/user/appdata/FoundryVTT" Mode="rw" Description="Container Path: /foundry/fvtt" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/FoundryVTT</Config>
