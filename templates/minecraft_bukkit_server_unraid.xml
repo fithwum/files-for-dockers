@@ -23,7 +23,7 @@
   <DonateLink>https://checkout.square.site/pay/340d93c602a042b8a223a2f7c184a6a2</DonateLink>
   <Description>This docker will run a Minecraft bukkit server on java 21.</Description>
   <Beta>False</Beta>
-  <Date>2025-12-19</Date>
+  <Date>2026-06-27</Date>
 
   <Changes>[font size=4][center]Minecraft[/center][/font]
 
@@ -43,11 +43,6 @@
     <Mode>host</Mode>
   </Networking>
   <Data>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/MCserver/backups/</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/minecraft-bukkit-server</HostDir>
       <ContainerDir>/MCserver</ContainerDir>
@@ -99,7 +94,6 @@
   <Labels/>
   <Config Name="Minecraft Version" Target="MC_VERSION" Default="" Mode="" Description="Pick your Minecraft version." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Minecraft Port" Target="GAME_PORT" Default="25565" Mode="tcp" Description="Set game port (default: 25565)." Type="Variable" Display="always" Required="true" Mask="false">25565</Config>
-  <Config Name="Save Data" Target="/MCserver/backups/" Default="" Mode="rw" Description="Container Path: /MCserver/backups/" Type="Path" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false|true" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Java Xmx size" Target="XMX_SIZE" Default="4G" Mode="" Description="Set java memory." Type="Variable" Display="always" Required="true" Mask="false">4G</Config>
   <Config Name="Java Xms size" Target="XMS_SIZE" Default="2G" Mode="" Description="Set java memory." Type="Variable" Display="always" Required="true" Mask="false">2G</Config>
