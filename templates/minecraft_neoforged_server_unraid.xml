@@ -23,7 +23,7 @@
   <DonateLink>https://checkout.square.site/pay/340d93c602a042b8a223a2f7c184a6a2</DonateLink>
   <Description>This docker will run a Minecraft neoforged server on java 21.</Description>
   <Beta>True</Beta>
-  <Date>2026-06-27</Date>
+  <Date>2026-07-02</Date>
 
   <Changes>[font size=4][center]Minecraft[/center][/font]
 
@@ -76,6 +76,11 @@
       <Mode/>
     </Variable>
     <Variable>
+      <Value>25</Value>
+      <Name>JAVA_VERSION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>25565</Value>
       <Name>GAME_PORT</Name>
       <Mode/>
@@ -99,6 +104,7 @@
   <Labels/>
   <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false|true" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="neoforged version" Target="NEOFORGED_VERSION" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Java Version" Target="JAVA_VERSION" Default="25" Mode="" Description="Pick your Java version." Type="Variable" Display="always" Required="true" Mask="false">25</Config>
   <Config Name="server version" Target="SERVER_VERSION" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="game port" Target="GAME_PORT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">25566</Config>
   <Config Name="XMX size" Target="XMX_SIZE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">8G</Config>
