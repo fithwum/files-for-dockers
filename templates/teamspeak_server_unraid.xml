@@ -96,7 +96,8 @@ To authenticate use the privilege key shown in the supervisord.log file in the /
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="TeamSpeak Version" Target="TS_VERSION" Default="3.13.7" Mode="" Description="Pick your TeamSpeak version." Type="Variable" Display="always" Required="true" Mask="false">3.13.7</Config>
+  <Config Name="Auto Update" Target="AUTO_UPDATE" Default="true|false" Mode="{3}" Description="" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="TeamSpeak Version" Target="TS_VERSION" Default="3.13.7" Mode="" Description="Pick your TeamSpeak version." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Host Port 1" Target="9987" Default="9987" Mode="udp" Description="Container Port: 9987" Type="Port" Display="always" Required="true" Mask="false">9987</Config>
   <Config Name="Host Port 2" Target="10011" Default="10011" Mode="tcp" Description="Container Port: 10011" Type="Port" Display="always" Required="true" Mask="false">10011</Config>
   <Config Name="Host Port 3" Target="30033" Default="30033" Mode="tcp" Description="Container Port: 30033" Type="Port" Display="always" Required="true" Mask="false">30033</Config>
