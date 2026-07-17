@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Minecraft</Name>
+  <Name>Minecraft-vanilla</Name>
   <Repository>gitea.fithwum.tech/fithwum/minecraft:vanilla</Repository>
-  <Registry>https://gitea.fithwum.tech/fithwum/minecraft/</Registry>
+  <Registry>https://hub.docker.com/r/fithwum/minecraft/</Registry>
   <Network>host</Network>
   <MyIP/>
   <Shell>sh</Shell>
@@ -23,15 +23,9 @@
   <DonateLink>https://checkout.square.site/pay/340d93c602a042b8a223a2f7c184a6a2</DonateLink>
   <Description>This docker will run a Minecraft vanilla server on java 21.</Description>
   <Beta>False</Beta>
-  <Date>2026-07-17</Date>
+  <Date>2026-07-02</Date>
 
   <Changes>[font size=4][center]Minecraft[/center][/font]
-
-[font size=3][b](2026-07-17)[/b][/font]
-&#x00a0;&#x00a0;- Updated base image to Debian Trixie.
-&#x00a0;&#x00a0;&#x00a0;- This version has the abillity to select between vanilla, bukkit, fabric, quilt, forge, and neoforge.
-&#x00a0;&#x00a0;&#x00a0;- You can also select your java version if needed.
-&#x00a0;&#x00a0;&#x00a0;- Old tags have been removed, the old minecraft templates will be removed.
 
 [font size=3][b](2022-06-16)[/b][/font]
 &#x00a0;&#x00a0;- Updated base image.
