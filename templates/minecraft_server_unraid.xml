@@ -45,7 +45,7 @@
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/minecraft-server</HostDir>
-      <ContainerDir>/MCserver</ContainerDir>
+      <ContainerDir>/mc_server</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -104,7 +104,7 @@
   <Config Name="Java Xmx size" Target="XMX_SIZE" Default="4G" Mode="" Description="Set java memory." Type="Variable" Display="always" Required="true" Mask="false">4G</Config>
   <Config Name="Java Xms size" Target="XMS_SIZE" Default="2G" Mode="" Description="Set java memory." Type="Variable" Display="always" Required="true" Mask="false">2G</Config>
   <Config Name="Java Xmn size" Target="XMN_SIZE" Default="1G" Mode="" Description="Set java memory." Type="Variable" Display="always" Required="true" Mask="false">1G</Config>
-  <Config Name="AppData Config Path" Target="/MCserver" Default="/mnt/user/appdata/minecraft-server" Mode="rw" Description="Container Path: /MCserver" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/minecraft-server</Config>
+  <Config Name="AppData Config Path" Target="/mc_server" Default="/mnt/user/appdata/minecraft-server" Mode="rw" Description="Container Path: /mc_server" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/minecraft-server</Config>
   <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
   <Config Name="Key 3" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
 </Container>

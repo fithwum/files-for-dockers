@@ -45,7 +45,7 @@
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/minecraft-forge-server</HostDir>
-      <ContainerDir>/MCserver</ContainerDir>
+      <ContainerDir>/mc_server</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -110,7 +110,7 @@
   <Config Name="XMX size" Target="XMX_SIZE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">8G</Config>
   <Config Name="XMS size" Target="XMS_SIZE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">2G</Config>
   <Config Name="XMN size" Target="XMN_SIZE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">512M</Config>
-  <Config Name="AppData Config Path" Target="/MCserver" Default="/mnt/user/appdata/minecraft-forge-server" Mode="rw" Description="" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/minecraft-forge-server</Config>
+  <Config Name="AppData Config Path" Target="/mc_server" Default="/mnt/user/appdata/minecraft-forge-server" Mode="rw" Description="Container Path: /mc_server" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/minecraft-forge-server</Config>
   <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
   <Config Name="Key 3" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
 </Container>
