@@ -105,7 +105,7 @@
   <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false|true" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="forge version" Target="FORGE_VERSION" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="MC version" Target="MC_VERSION" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Java Version" Target="JAVA_VERSION" Default="25" Mode="" Description="Pick your Java version." Type="Variable" Display="always" Required="true" Mask="false">25</Config>
+  <Config Name="Java Version" Target="JAVA_VERSION" Default="21|25" Mode="" Description="Pick your Java version." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="game port" Target="GAME_PORT" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">25565</Config>
   <Config Name="XMX size" Target="XMX_SIZE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">8G</Config>
   <Config Name="XMS size" Target="XMS_SIZE" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">2G</Config>
