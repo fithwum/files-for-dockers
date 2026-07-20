@@ -121,6 +121,21 @@
       <Mode/>
     </Variable>
     <Variable>
+      <Value></Value>
+      <Name>ENABLE_RCON</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>25575</Value>
+      <Name>RCON_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>dockerAdmin</Value>
+      <Name>RCON_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>99</Value>
       <Name>PUID</Name>
       <Mode/>
@@ -145,6 +160,9 @@
   <Config Name="Java Xmx size" Target="XMX_SIZE" Default="4G" Mode="" Description="Set java MAX memory." Type="Variable" Display="always" Required="true" Mask="false">4G</Config>
   <Config Name="Java Xms size" Target="XMS_SIZE" Default="2G" Mode="" Description="Set java memory." Type="Variable" Display="always" Required="true" Mask="false">2G</Config>
   <Config Name="Java Xmn size" Target="XMN_SIZE" Default="1G" Mode="" Description="Set java MIN memory." Type="Variable" Display="always" Required="true" Mask="false">1G</Config>
+  <Config Name="RCON Enable" Target="ENABLE_RCON" Default="true|false" Mode="" Description="enable RCON?" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="RCON Port" Target="RCON_PORT" Default="25575" Mode="" Description="Set RCON port." Type="Variable" Display="always" Required="true" Mask="false">25575</Config>
+  <Config Name="RCON Password" Target="RCON_PASSWORD" Default="dockerAdmin" Mode="" Description="Set RCON password" Type="Variable" Display="always" Required="true" Mask="false">dockerAdmin</Config>
   <Config Name="AppData Config Path" Target="/mcserver" Default="/mnt/user/appdata/minecraft-server" Mode="rw" Description="" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/minecraft-server</Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
