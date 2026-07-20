@@ -132,7 +132,7 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Minecraft Type" Target="MC_TYPE" Default="vanilla|bukkit|fabric|quilt|forge|neoforged" Mode="" Description="Select your Minecraft type" Type="Variable" Display="always" Required="true" Mask="false">vanilla</Config>
+  <Config Name="Minecraft Type" Target="MC_TYPE" Default="vanilla|bukkit|fabric|quilt|forge|neoforged" Mode="" Description="Select your Minecraft type" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Minecraft Version" Target="MC_VERSION" Default="1.21.11" Mode="" Description="Pick your Minecraft version." Type="Variable" Display="always" Required="true" Mask="false">1.21.11</Config>
   <Config Name="forge version" Target="FORGE_VERSION" Default="61.1.0" Mode="" Description="Set you forge version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false">61.1.0</Config>
   <Config Name="neoforged version" Target="NEOFORGED_VERSION" Default="21.11.44" Mode="" Description="Set you neoforged version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false">21.11.44</Config>
@@ -141,11 +141,11 @@
   <Config Name="quilt version" Target="QUILT_VERSION" Default="0.15.0" Mode="" Description="Set you Quilt version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false">0.15.0</Config>
   <Config Name="Minecraft Port" Target="GAME_PORT" Default="25565" Mode="tcp" Description="Set game port (default: 25565)." Type="Variable" Display="always" Required="true" Mask="false">25565</Config>
   <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false|true" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Java Version" Target="JAVA_VERSION" Default="21|25" Mode="" Description="Select your Java version." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Java Version" Target="JAVA_VERSION" Default="openjdk-21-jre|openjdk-25-jre|msopenjdk-21|msopenjdk-25" Mode="" Description="Select your Java version." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Java Xmx size" Target="XMX_SIZE" Default="4G" Mode="" Description="Set java MAX memory." Type="Variable" Display="always" Required="true" Mask="false">4G</Config>
   <Config Name="Java Xms size" Target="XMS_SIZE" Default="2G" Mode="" Description="Set java memory." Type="Variable" Display="always" Required="true" Mask="false">2G</Config>
   <Config Name="Java Xmn size" Target="XMN_SIZE" Default="1G" Mode="" Description="Set java MIN memory." Type="Variable" Display="always" Required="true" Mask="false">1G</Config>
-  <Config Name="AppData Config Path" Target="/mc_server" Default="/mnt/user/appdata/minecraft-server" Mode="rw" Description="" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/minecraft-server</Config>
+  <Config Name="AppData Config Path" Target="/mcserver" Default="/mnt/user/appdata/minecraft-server" Mode="rw" Description="" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/minecraft-server</Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
 </Container>
