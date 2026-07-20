@@ -61,32 +61,32 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>1.21.11</Value>
+      <Value></Value>
       <Name>MC_VERSION</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>61.1.0</Value>
+      <Value></Value>
       <Name>FORGE_VERSION</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>21.11.44</Value>
+      <Value></Value>
       <Name>NEOFORGED_VERSION</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>0.19.3</Value>
+      <Value></Value>
       <Name>FABRIC_VERSION</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>1.1.1</Value>
+      <Value></Value>
       <Name>FABRIC_INSTALLER_VERSION</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>0.15.0</Value>
+      <Value></Value>
       <Name>QUILT_VERSION</Name>
       <Mode/>
     </Variable>
@@ -133,12 +133,12 @@
   </Environment>
   <Labels/>
   <Config Name="Minecraft Type" Target="MC_TYPE" Default="vanilla|bukkit|fabric|quilt|forge|neoforged" Mode="" Description="Select your Minecraft type" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Minecraft Version" Target="MC_VERSION" Default="1.21.11" Mode="" Description="Pick your Minecraft version." Type="Variable" Display="always" Required="true" Mask="false">1.21.11</Config>
-  <Config Name="forge version" Target="FORGE_VERSION" Default="61.1.0" Mode="" Description="Set you forge version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false">61.1.0</Config>
-  <Config Name="neoforged version" Target="NEOFORGED_VERSION" Default="21.11.44" Mode="" Description="Set you neoforged version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false">21.11.44</Config>
-  <Config Name="fabric version" Target="FABRIC_VERSION" Default="0.19.3" Mode="" Description="Set you fabric version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false">0.19.3</Config>
-  <Config Name="installer version" Target="FABRIC_INSTALLER_VERSION" Default="1.1.1" Mode="" Description="Set you fabric installer version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false">1.1.1</Config>
-  <Config Name="quilt version" Target="QUILT_VERSION" Default="0.15.0" Mode="" Description="Set you Quilt version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false">0.15.0</Config>
+  <Config Name="Minecraft Version" Target="MC_VERSION" Default="1.21.11" Mode="" Description="Pick your Minecraft version." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="forge version" Target="FORGE_VERSION" Default="61.1.0" Mode="" Description="Set you forge version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="neoforged version" Target="NEOFORGED_VERSION" Default="21.11.44" Mode="" Description="Set you neoforged version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="fabric version" Target="FABRIC_VERSION" Default="0.19.3" Mode="" Description="Set you fabric version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="installer version" Target="FABRIC_INSTALLER_VERSION" Default="1.1.1" Mode="" Description="Set you fabric installer version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="quilt version" Target="QUILT_VERSION" Default="0.15.0" Mode="" Description="Set you Quilt version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Minecraft Port" Target="GAME_PORT" Default="25565" Mode="tcp" Description="Set game port (default: 25565)." Type="Variable" Display="always" Required="true" Mask="false">25565</Config>
   <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false|true" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Java Version" Target="JAVA_VERSION" Default="openjdk-21-jre|openjdk-25-jre|msopenjdk-21|msopenjdk-25" Mode="" Description="Select your Java version." Type="Variable" Display="always" Required="true" Mask="false"></Config>
