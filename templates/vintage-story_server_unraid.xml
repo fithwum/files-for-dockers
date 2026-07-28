@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Vintage-Story</Name>
+  <Repository>gitea.fithwum.tech/fithwum/vintage-story:latest</Repository>
+  <Registry>https://hub.docker.com/r/fithwum/vintage-story/</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/125134-support-fithwum-vintage-story-server/</Support>
+  <Project>https://www.vintagestory.at</Project>
+  <ReadMe/>
+  <Overview>This docker will run a Vintage-Story server.</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>https://github.com/fithwum/files-for-dockers/templates/vintage-story_server_unraid.xml</TemplateURL>
+  <Icon>https://gitea.fithwum.tech/fithwum/files-for-dockers/raw/branch/master/icons/vintage-story.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1784389857</DateInstalled>
+  <DonateText>Buy me a coffee if you like.</DonateText>
+  <DonateLink>https://checkout.square.site/pay/340d93c602a042b8a223a2f7c184a6a2</DonateLink>
+  <Requires/>
+  <Config Name="Vintage Story Release Channel" Target="VS_CHANNEL" Default="stable|unstable" Mode="" Description="Select which release channel you want to use." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="vintage-story Version" Target="VS_VERSION" Default="" Mode="" Description="Pick your vintage-story version." Type="Variable" Display="always" Required="true" Mask="false">1.21.5</Config>
+  <Config Name="Dotnet Version" Target="DOTNET_VERSION" Default="8.0|9.0|10.0" Mode="" Description="Select Dotnet version." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="AppData Config Path" Target="/VSserver/server" Default="/mnt/user/appdata/vintage-story-server" Mode="rw" Description="Appdata path" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/Games/Servers/vintage-story-server</Config>
+  <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
+  <Config Name="Key 3" Target="PGID" Default="100" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
+  <TailscaleStateDir/>
+</Container>
