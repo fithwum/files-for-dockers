@@ -26,13 +26,6 @@ To authenticate use the privilege key shown in the supervisord.log file in the /
   <DateInstalled/>
   <DonateText>Buy me a coffee if you like.</DonateText>
   <DonateLink>https://checkout.square.site/pay/340d93c602a042b8a223a2f7c184a6a2</DonateLink>
-  <Description>TeamSpeak is proprietary voice-over-Internet Protocol (VoIP) software that allows computer users to speak on a chat channel with fellow computer users, much like a telephone conference call. A TeamSpeak user will often wear a headset with an integrated microphone. Users use the TeamSpeak client software to connect to a TeamSpeak server of their choice, from there they can join chat channels and discuss things.[br][br]&#xD;
-[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
-[b]/ts3-alpine[/b] This is where teamspeak will store it's configuration file, database and logs.[br][br]&#xD;
-[b][u][span style='color: #E80000;']Notes[/span][/u][/b][br]
-Connect to the server using the TeamSpeak client with the host IP address and port 9987.[br]
-To authenticate use the privilege key shown in the supervisord.log file in the /ts3-alpine folder.
-</Description>
   <Beta>False</Beta>
   <Date>2025-07-04</Date>
   <Changes>
@@ -51,51 +44,6 @@ To authenticate use the privilege key shown in the supervisord.log file in the /
 [font size=3][b](2019-01-02)[/b][/font]
 &#x00a0;&#x00a0;- Changed the update process to preserve all settings/files/logs created by user/server.
   </Changes>
-  <Networking>
-    <Mode>host</Mode>
-    <Publish>
-      <Port>
-        <HostPort>9987</HostPort>
-        <ContainerPort>9987</ContainerPort>
-        <Protocol>udp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>10011</HostPort>
-        <ContainerPort>10011</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>30033</HostPort>
-        <ContainerPort>30033</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/teamspeak-server</HostDir>
-      <ContainerDir>/ts3server</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
- </Data>
-  <Environment>
-    <Variable>
-      <Value>3.13.7</Value>
-      <Name>TS_VERSION</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>99</Value>
-      <Name>PUID</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>100</Value>
-      <Name>PGID</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
-  <Labels/>
   <Config Name="Auto Update" Target="AUTO_UPDATE" Default="true|false" Mode="{3}" Description="" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
   <Config Name="TeamSpeak Version" Target="TS_VERSION" Default="3.13.7" Mode="" Description="Pick your TeamSpeak version." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Host Port 1" Target="9987" Default="9987" Mode="udp" Description="Container Port: 9987" Type="Port" Display="always" Required="true" Mask="false">9987</Config>

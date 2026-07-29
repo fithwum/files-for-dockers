@@ -10,7 +10,14 @@
   <Support>https://forums.unraid.net/topic/125134-support-fithwum-vintage-story-server/</Support>
   <Project>https://www.vintagestory.at</Project>
   <ReadMe/>
-  <Overview>This docker will run a Vintage-Story server.</Overview>
+  <Overview>This docker will run a Vintage-Story server.
+
+  UPDATE NOTICE: The container can check on every start/restart if if you leave the version blank. 
+
+  CONSOLE: To connect to the console open up the terminal on the host machine
+  type in: 'docker exec -u vintagestory -ti NAMEOFYOURCONTAINER screen -xS VintageStory' (without quotes).
+  to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.
+  </Overview>
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL>https://github.com/fithwum/files-for-dockers/templates/vintage-story_server_unraid.xml</TemplateURL>
@@ -21,9 +28,8 @@
   <DateInstalled>1784389857</DateInstalled>
   <DonateText>Buy me a coffee if you like.</DonateText>
   <DonateLink>https://checkout.square.site/pay/340d93c602a042b8a223a2f7c184a6a2</DonateLink>
-  <Requires/>
   <Config Name="Vintage Story Release Channel" Target="VS_CHANNEL" Default="stable|unstable" Mode="" Description="Select which release channel you want to use." Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="vintage-story Version" Target="VS_VERSION" Default="" Mode="" Description="Pick your vintage-story version." Type="Variable" Display="always" Required="true" Mask="false">1.21.5</Config>
+  <Config Name="vintage-story Version" Target="VS_VERSION" Default="" Mode="" Description="Pick your vintage-story version (leave blank for auto update)." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Dotnet Version" Target="DOTNET_VERSION" Default="8.0|9.0|10.0" Mode="" Description="Select Dotnet version." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="AppData Config Path" Target="/VSserver/server" Default="/mnt/user/appdata/vintage-story-server" Mode="rw" Description="Appdata path" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/Games/Servers/vintage-story-server</Config>
   <Config Name="Key 2" Target="PUID" Default="99" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>

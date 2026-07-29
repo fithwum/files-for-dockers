@@ -25,11 +25,6 @@ Connect to the server using the host IP address and port 30000 once connected it
   <DateInstalled/>
   <DonateText>Buy me a coffee if you like.</DonateText>
   <DonateLink>https://checkout.square.site/pay/340d93c602a042b8a223a2f7c184a6a2</DonateLink>
-  <Description>FoundryVTT is a web based Dungeons and Dragons application that allows users to play with others over the internet.  You will have to purchase a copy of foundryvtt from https://foundryvtt.com[br][br]&#xD;
-[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
-[b]/FoundryVTT[/b] is where all configuration files and data will be. You will have to purchase a copy of foundryvtt from https://foundryvtt.com then download the linux version and unpack it to the fvtt folder.
-Connect to the server using the host IP address and port 30000 once connected it will ask you for a licence code.[br][br]&#xD;
-[b][u][span style='color: #E80000;']Notes[/span][/u][/b][br]If you run into permission problems with some files simply restart the docker and it will fix itself. i am working on a propor fix for this problem[br]</Description>
   <Beta>False</Beta>
   <Date>2026-06-04</Date>
   <Changes>
@@ -44,46 +39,6 @@ Connect to the server using the host IP address and port 30000 once connected it
 [font size=3][b](2020-06-21)[/b][/font]
 &#x00a0;&#x00a0;- First test.
   </Changes>
-  <Networking>
-    <Mode>host</Mode>
-    <Publish>
-      <Port>
-        <HostPort>30000</HostPort>
-        <ContainerPort>30000</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/FoundryVTT</HostDir>
-      <ContainerDir>/foundry/fvtt</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-	<Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/foundry/data</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment>
-    <Variable>
-      <Value>99</Value>
-      <Name>PUID</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>100</Value>
-      <Name>PGID</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>13.351</Value>
-      <Name>FOUNDRYVTT_VERSION</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
-  <Labels/>
   <Config Name="FoundryVTT Version" Target="FOUNDRYVTT_VERSION" Default="13.351" Mode="" Description="Pick your FoundryVTT version." Type="Variable" Display="always" Required="true" Mask="false">13.351</Config>
   <Config Name="Host Port 1" Target="30000" Default="30000" Mode="tcp" Description="Container Port: 30000" Type="Port" Display="always" Required="true" Mask="false">30000</Config>
   <Config Name="Data Path" Target="/foundry/data" Default="" Mode="rw" Description="Container Path: /foundry/data" Type="Path" Display="always" Required="true" Mask="false"></Config>
