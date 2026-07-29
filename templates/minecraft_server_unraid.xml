@@ -10,7 +10,11 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/125134-support-fithwum-minecraft-server/</Support>
   <Project>https://www.minecraft.net/</Project>
-  <Overview>This docker can run a Minecraft vanilla/bukkit/forge/neoforged/fabric/quilt(your choice) server on openjdk21 or 25(your choice).</Overview>
+  <Overview>
+  This docker can run a Minecraft vanilla/bukkit/forge/neoforged/fabric/quilt(your choice) server on openjdk21 or 25(your choice).
+
+  UPDATE: This container can now auto update vanilla on restart if you leave the version blank.
+  </Overview>
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL>https://gitea.fithwum.tech/fithwum/files-for-dockers/raw/branch/master/templates/minecraft_server_unraid.xml</TemplateURL>
@@ -44,13 +48,13 @@
 &#x00a0;&#x00a0;- First Test.
   </Changes>
   <Config Name="Minecraft Type" Target="MC_TYPE" Default="vanilla|bukkit|fabric|quilt|forge|neoforged" Mode="" Description="Select your Minecraft type" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Minecraft Version" Target="MC_VERSION" Default="1.21.11" Mode="" Description="Pick your Minecraft version." Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="forge version" Target="FORGE_VERSION" Default="61.1.0" Mode="" Description="Set you forge version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="neoforged version" Target="NEOFORGED_VERSION" Default="21.11.44" Mode="" Description="Set you neoforged version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="fabric version" Target="FABRIC_VERSION" Default="0.19.3" Mode="" Description="Set you fabric version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="installer version" Target="FABRIC_INSTALLER_VERSION" Default="1.1.1" Mode="" Description="Set you fabric installer version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="quilt version" Target="QUILT_VERSION" Default="0.15.0" Mode="" Description="Set you Quilt version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="Minecraft Port" Target="GAME_PORT" Default="25565" Mode="tcp" Description="Set game port (default: 25565)." Type="Variable" Display="always" Required="true" Mask="false">25565</Config>
+  <Config Name="Minecraft Version" Target="MC_VERSION" Default="" Mode="" Description="Pick your Minecraft version (if vanilla selected this can be left blank for auto update on restart)." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="forge version" Target="FORGE_VERSION" Default="" Mode="" Description="Set you forge version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="neoforged version" Target="NEOFORGED_VERSION" Default="" Mode="" Description="Set you neoforged version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="fabric version" Target="FABRIC_VERSION" Default="" Mode="" Description="Set you fabric version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="installer version" Target="FABRIC_INSTALLER_VERSION" Default="" Mode="" Description="Set you fabric installer version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="quilt version" Target="QUILT_VERSION" Default="" Mode="" Description="Set you Quilt version. (remove if not using)" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Minecraft Port" Target="GAME_PORT" Default="" Mode="tcp" Description="Set game port (default: 25565)." Type="Variable" Display="always" Required="true" Mask="false">25565</Config>
   <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false|true" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Java Version" Target="JAVA_VERSION" Default="openjdk-21-jre|openjdk-25-jre" Mode="" Description="Select your Java version." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Java Xmx size" Target="XMX_SIZE" Default="4G" Mode="" Description="Set java MAX memory." Type="Variable" Display="always" Required="true" Mask="false">4G</Config>
